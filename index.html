@@ -3,182 +3,365 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIY Sign Guy | DIY LED Sign Kits, Pylon Signs & Lighted Sign Cabinets</title>
-<meta name="description" content="DIY LED sign kits for businesses: wall signs, pole signs, pylon signs, and lighted sign cabinets. Custom sizes, aluminum frames, nationwide shipping. Save up to 60% over local retail.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<title>DIY Sign Guy — Pre-Lit Aluminum Sign Cabinet Kits, Shipped Nationwide</title>
+<meta name="description" content="Pre-lit aluminum sign cabinet kits custom cut to your size, welded corners, LEDs and power supply included. Ships nationwide. Save up to 60% over local retail. 20+ years in the sign business.">
+<style>
+  :root{--ink:#141a22;--ink-2:#1d2530;--ink-3:#28313f;--paper:#f5f6f8;--white:#fff;
+    --amber:#ffb420;--amber-deep:#e69500;--amber-text:#8f5500;--glow:rgba(255,180,32,.35);--line:#e2e6ec;
+    --muted:#5b6675;--muted-dark:#9aa6b5;--radius:14px;}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--amber);color:var(--ink);padding:12px 20px;font-weight:700;z-index:100;border-radius:0 0 10px 0;text-decoration:none;}
+  .skip:focus{left:0;}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--amber-deep);outline-offset:2px;}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important;}html{scroll-behavior:auto;}}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;}
+  img{max-width:100%;display:block;} a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.01em;}
+  section{padding:68px 0;}
+  .kicker{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-text);margin-bottom:14px;}
+  .hero .kicker,.page-hero .kicker,.kit-dark .kicker,.cta-band .kicker{color:var(--amber);}
+  .sec-title{font-size:clamp(1.6rem,3.2vw,2.3rem);margin-bottom:14px;}
+  .sec-sub{color:var(--muted);max-width:660px;font-size:1.05rem;}
+  header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.25);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.1rem;letter-spacing:.02em;text-decoration:none;}
+  .brand .logo-box{width:42px;height:42px;border-radius:9px;background:linear-gradient(160deg,var(--amber),var(--amber-deep));display:flex;align-items:center;justify-content:center;color:var(--ink);font-size:.55rem;font-weight:800;text-align:center;line-height:1.1;box-shadow:0 0 18px var(--glow);}
+  .brand span em{color:var(--amber);font-style:normal;}
+  .nav-links{display:flex;gap:24px;align-items:center;font-size:.92rem;}
+  .nav-links a{text-decoration:none;color:#cdd5e0;font-weight:600;}
+  .nav-links a:hover,.nav-links a.active{color:var(--amber);}
+  .nav-links a.btn-amber,.nav-links a.btn-amber:hover{color:var(--ink);}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .15s,box-shadow .15s;cursor:pointer;border:none;}
+  .btn-amber{background:linear-gradient(160deg,var(--amber),var(--amber-deep));color:var(--ink);box-shadow:0 4px 18px var(--glow);}
+  .btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 26px var(--glow);}
+  .btn-ghost{border:2px solid #ffffff44;color:#fff;}
+  .btn-sm{padding:10px 18px;font-size:.88rem;}
+  .hero{background:radial-gradient(1100px 520px at 75% -10%,#33405288 0%,transparent 60%),var(--ink);color:#fff;padding:84px 0 80px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .hero h1{font-size:clamp(2rem,4.4vw,3.1rem);margin-bottom:20px;}
+  .lit{color:var(--amber);text-shadow:0 0 26px var(--glow);}
+  .hero p.lead{font-size:1.13rem;color:#c3ccd9;margin-bottom:28px;max-width:540px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px;}
+  .hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
+  .hero-stats .stat b{display:block;font-size:1.5rem;color:var(--amber);}
+  .hero-stats .stat span{font-size:.85rem;color:var(--muted-dark);}
+  .page-hero{background:radial-gradient(900px 420px at 80% -20%,#33405288 0%,transparent 60%),var(--ink);color:#fff;padding:64px 0 58px;}
+  .page-hero h1{font-size:clamp(1.9rem,3.8vw,2.7rem);margin-bottom:14px;}
+  .page-hero p{color:#c3ccd9;max-width:640px;font-size:1.08rem;}
+  .photo-ph{background:var(--ink-2);border:2px dashed #46536566;border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted-dark);text-align:center;padding:20px;font-size:.85rem;}
+  .photo-ph .ph-icon{font-size:2rem;opacity:.7;}
+  .hero .photo-ph{min-height:360px;box-shadow:0 20px 50px rgba(0,0,0,.35);}
+  .photo-ph.light{background:#eef1f5;border-color:#c6cdd8;color:#4d5866;}
+  .ph-img{width:100%;display:block;object-fit:cover;}
+  .hero-img-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);}
+  .card-img{height:230px;border-bottom:1px solid var(--line);}
+  .round-img{border-radius:var(--radius);max-height:480px;box-shadow:0 14px 38px rgba(20,26,34,.15);}
+  .post-img{height:170px;border-bottom:1px solid var(--line);}
+  .trust{background:var(--amber);}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust .t-item{padding:18px 10px;text-align:center;font-weight:700;color:var(--ink);font-size:.92rem;}
+  .trust .t-item small{display:block;font-weight:600;font-size:.78rem;opacity:.75;}
+  .alt{background:var(--paper);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;}
+  .step .num{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--amber);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;}
+  .step h3{font-size:1.05rem;margin-bottom:8px;}
+  .step p{font-size:.92rem;color:var(--muted);}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;}
+  .about-grid .photo-ph{min-height:400px;}
+  .about-copy p{color:var(--muted);margin-bottom:16px;font-size:1.02rem;}
+  .about-copy p b{color:var(--ink);}
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;}
+  .prod-card-wrap{position:relative;}
+  .prod{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;height:100%;}
+  .prod:hover{box-shadow:0 14px 38px rgba(20,26,34,.12);transform:translateY(-3px);}
+  .prod .photo-ph{min-height:200px;border-radius:0;border:none;border-bottom:1px solid var(--line);}
+  .prod-body{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1;}
+  .prod .size{font-size:1.9rem;font-weight:800;}
+  .prod .size small{font-size:.95rem;color:var(--muted);font-weight:600;}
+  .prod .use{margin:6px 0 14px;font-weight:700;color:var(--amber-text);font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;}
+  .prod p{font-size:.93rem;color:var(--muted);margin-bottom:18px;flex:1;}
+  .badge{position:absolute;z-index:2;background:var(--ink);color:var(--amber);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin:14px;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+  .kit-dark{background:var(--ink);color:#fff;}
+  .kit-dark .sec-sub{color:var(--muted-dark);}
+  .kit-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center;margin-top:20px;}
+  .kit-list{list-style:none;margin-top:26px;display:grid;gap:14px;}
+  .kit-list li{display:flex;gap:14px;align-items:flex-start;background:var(--ink-2);border:1px solid #38445533;border-radius:12px;padding:15px 18px;}
+  .kit-list .chk{color:var(--amber);font-weight:800;}
+  .kit-list b{display:block;font-size:.97rem;}
+  .kit-list span{font-size:.88rem;color:var(--muted-dark);}
+  .kit-grid .photo-ph{min-height:400px;}
+  .video-ph{background:var(--ink-2);border:2px dashed #46536566;border-radius:var(--radius);min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted-dark);text-align:center;padding:30px;margin-top:40px;}
+  .video-ph .play{width:74px;height:74px;border-radius:50%;background:linear-gradient(160deg,var(--amber),var(--amber-deep));display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--ink);box-shadow:0 0 30px var(--glow);}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+  .post-card{border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:box-shadow .2s,transform .2s;}
+  a.post-card:hover{box-shadow:0 14px 38px rgba(20,26,34,.12);transform:translateY(-3px);}
+  .post-card .photo-ph{min-height:150px;border-radius:0;border:none;border-bottom:1px solid var(--line);}
+  .post-body{padding:22px;}
+  .post-body .tag{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-text);margin-bottom:8px;}
+  .post-body h3{font-size:1.05rem;margin-bottom:8px;}
+  .post-body p{font-size:.88rem;color:var(--muted);}
+  .soon{opacity:.65;} .soon .tag{color:var(--muted);}
+  .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px;}
+  .who-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;}
+  .who-card .ic{font-size:1.6rem;margin-bottom:10px;}
+  .who-card h3{font-size:1rem;margin-bottom:6px;}
+  .who-card p{font-size:.88rem;color:var(--muted);}
+  .cta-band{background:var(--ink);color:#fff;padding:52px 0;}
+  .cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .cta-band .big{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:800;max-width:620px;}
+  .cta-band .big em{color:var(--amber);font-style:normal;}
+  .quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;}
+  .quote-info p{color:var(--muted);margin-bottom:22px;}
+  .assure{display:grid;gap:12px;margin-top:26px;}
+  .assure div{display:flex;gap:10px;font-size:.92rem;}
+  .assure .chk{color:var(--amber-text);font-weight:800;}
+  form.qform{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:grid;gap:18px;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #cfd6df;border-radius:9px;font-size:.95rem;font-family:inherit;background:#fff;color:var(--ink);}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--amber);border-color:var(--amber);}
+  .field textarea{min-height:110px;resize:vertical;}
+  .qform .btn{width:100%;font-size:1.05rem;padding:15px;}
+  .qform .fine{font-size:.78rem;color:var(--muted);text-align:center;}
+  .faq-list{margin-top:36px;display:grid;gap:14px;max-width:860px;}
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 24px;}
+  details summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  details summary::after{content:"+";font-size:1.3rem;color:var(--amber-text);font-weight:800;}
+  details[open] summary::after{content:"\2013";}
+  details p{margin-top:12px;color:var(--muted);font-size:.94rem;}
+  article.post{max-width:760px;margin:0 auto;}
+  article.post h1{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:18px;}
+  article.post h2{font-size:1.4rem;margin:34px 0 12px;}
+  article.post p{color:#333c48;margin-bottom:16px;font-size:1.03rem;}
+  article.post ul{margin:0 0 16px 22px;color:#333c48;}
+  article.post li{margin-bottom:8px;}
+  .post-meta{color:var(--muted);font-size:.88rem;margin-bottom:26px;}
+  footer{background:var(--ink);color:var(--muted-dark);padding:54px 0 30px;font-size:.9rem;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:38px;}
+  footer h2{color:#fff;font-size:.95rem;margin-bottom:14px;font-weight:800;}
+  footer a{color:var(--muted-dark);text-decoration:none;display:block;margin-bottom:8px;}
+  footer a:hover{color:var(--amber);}
+  .soc-row{display:flex;gap:10px;margin-top:16px;}
+  .soc{width:38px;height:38px;border-radius:50%;background:var(--ink-2);border:1px solid #38445566;display:flex !important;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;color:#cdd5e0 !important;text-decoration:none;margin:0 !important;}
+  .soc:hover{background:var(--amber);color:var(--ink) !important;border-color:var(--amber);}
+  .foot-bottom{border-top:1px solid #333e4d55;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;}
+  @media(max-width:900px){
+    .hero-grid,.kit-grid,.quote-grid,.about-grid{grid-template-columns:1fr;}
+    .steps,.who-grid{grid-template-columns:repeat(2,1fr);}
+    .prod-grid,.blog-grid{grid-template-columns:1fr;}
+    .trust .wrap{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+    .foot-grid{grid-template-columns:1fr;}
+    .hero .photo-ph{min-height:240px;}
+  }
+</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
 <header>
-  <div class="nav-pill">
-    <nav>
-      <div class="logo"><span class="sign">DIY</span><span class="guy">SignGuy</span></div>
-      <ul class="nav-links">
-        <li><a href="kits-pricing.html">DIY Kits &amp; Pricing</a></li>
-        <li><a href="pole-pylon-sign-kit.html">Pole &amp; Pylon Signs</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a class="btn btn-primary btn-sm" href="contact.html">Get Your Free Quote</a>
-      </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <div class="logo-box">YOUR<br>LOGO</div>
+      <span>DIY <em>SIGN</em> GUY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="kits.html">Our Kits</a>
+      <a href="pylon-signs.html">Pylon Pole Signs</a>
+      <a href="faq.html">Q &amp; A</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-amber btn-sm">Get a Free Quote</a>
     </nav>
   </div>
 </header>
+<main id="main">
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Custom Sizes · Nationwide Shipping</p>
-      <h1>Build It. <span class="glow-red">Light It.</span> <span class="glow-blue">Own It.</span></h1>
-      <p class="sub">DIY Sign Guy helps business owners, contractors, installers, and do-it-yourself customers save money on outdoor LED sign kits, completed lighted sign cabinets, pylon pole signs, mounting hardware, coating options, and sign-building coaching.</p>
+      <span class="kicker">Pre-Lit Aluminum Sign Cabinet Kits &middot; Shipped Nationwide</span>
+      <h1>A Professional <span class="lit">Lighted Sign</span> for Your Business — Built by Us, Installed by You.</h1>
+      <p class="lead">We custom-cut heavy-duty aluminum sign cabinets to your exact size, weld the corners, install edge-lit LEDs, and ship the complete kit to your door — power supply included. You put it up and save up to 60% over local retail.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="contact.html">Get Your Free Quote</a>
-        <a class="btn btn-outline" href="kits-pricing.html">See DIY Kits &amp; Pricing</a>
+        <a href="contact.html" class="btn btn-amber">Get My Free Quote</a>
+        <a href="kits.html" class="btn btn-ghost">See Our Kits</a>
       </div>
-      <div class="chip-cloud">
-        <span class="chip c-red">Wall Sign Kits</span>
-        <span class="chip c-blue">Pylon &amp; Pole Signs</span>
-        <span class="chip c-gold">Roadside Signs</span>
-        <span class="chip">Storefront Signs</span>
-        <span class="chip">Outdoor Lighted Cabinets</span>
-        <span class="chip">Mounting Hardware</span>
-        <span class="chip">LED Lighting Systems</span>
-        <span class="chip">Aluminum Sign Frames</span>
-        <span class="chip">Sign-Building Coaching</span>
+      <div class="hero-stats">
+        <div class="stat"><b>2004</b><span>Helping DIYers ever since</span></div>
+        <div class="stat"><b>60%</b><span>Savings vs. local retail</span></div>
+        <div class="stat"><b>3</b><span>Cabinet sizes: 4", 7", 10"</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <img src="images/blank-lighted-sign-mockup-brick-storefront-night.webp" alt="Illuminated outdoor LED sign cabinet mounted on a brick storefront at night, DIY sign kit example">
-      </div>
-      <div class="floating-badge">
-        <div class="n">60%</div>
-        <div class="l">Save up to 60% over local retail sign pricing</div>
-      </div>
-    </div>
+    <div class="hero-img-wrap"><img class="ph-img" src="images/hero-collage.jpg" alt="DIY Sign Guy — your one-stop shop for outdoor LED lighted sign kits and cabinets since 2004, shown on a small-town main street at dusk with lighted wall, kit, and pylon signs"></div>
   </div>
 </section>
 
-<section class="bento">
+<div class="trust">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">DIY Outdoor LED Lighted Business Sign Kits</p>
-      <h2>A kit for every kind of business sign</h2>
-      <p>Whether you need a wall sign, a roadside pylon, or a full lighted cabinet, every kit ships with custom sizing, LED lighting, and aluminum framing — ready for your own local installer, electrician, or contractor.</p>
-    </div>
-    <div class="bento-grid">
-      <div class="bento-card">
-        <img src="images/diy-led-sign-kit-assembled-and-lit-by-customer.webp" alt="DIY LED wall sign kit assembled and lit by a customer, shown with added black frame" style="border-radius:var(--radius-sm); margin-bottom:12px;">
-        <h3>Wall Sign Kits</h3>
-        <p>A good choice for storefronts, buildings, shops, restaurants, salons, churches, offices, and retail businesses. Single-sided or double-sided, in custom sizes.</p>
-        <a href="kits-pricing.html">See wall sign kits →</a>
-      </div>
-      <div class="bento-card">
-        <img src="images/diy-single-pole-pylon-sign-kit-shipped-nationwide.webp" alt="DIY single pole pylon sign kit shipped nationwide, heavy duty aluminum frame with LED lighting" style="border-radius:var(--radius-sm); margin-bottom:12px;">
-        <h3>Pole &amp; Pylon Signs</h3>
-        <p>Strong, professional roadside visibility for storefronts, shopping centers, and highway businesses. Shipped nationwide, installed locally.</p>
-        <a href="pole-pylon-sign-kit.html">See pylon sign kits →</a>
-      </div>
-      <div class="bento-card">
-        <img src="images/outdoor-led-lighted-pylon-signs-business-examples.webp" alt="Outdoor LED lighted pylon signs for BBQ, plumbing, auto repair, landscaping, and real estate businesses" style="border-radius:var(--radius-sm); margin-bottom:12px;">
-        <h3>Roadside &amp; Storefront Signs</h3>
-        <p>Help customers find your location during the day, at night, and in poor weather with a lighted sign built for visibility.</p>
-        <a href="kits-pricing.html">See pricing →</a>
-      </div>
-      <div class="bento-card">
-        <img src="images/diy-lighted-sign-cabinet-complete-with-graphics-example.webp" alt="Completed DIY lighted sign cabinet with graphics installed, example for Wild Peak Outfitters" style="border-radius:var(--radius-sm); margin-bottom:12px;">
-        <h3>Complete Sign Cabinets</h3>
-        <p>Want it built for you instead of kit-assembled? Ask about a completed lighted sign cabinet, ready for graphics and installation.</p>
-        <a href="contact.html">Ask about complete builds →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="savings">
-  <div class="savings-inner">
-    <div class="savings-num">60%</div>
-    <div class="savings-text">
-      <h3>Save Up to 60% Over Local Retail</h3>
-      <p>Instead of paying for a full completed sign project from one local company, order the sign cabinet kit and use your own local installer, electrician, or contractor for final assembly. Same clean, professional outdoor LED sign — more control over the cost.</p>
-    </div>
+    <div class="t-item">Welded Corners<small>Not screwed-together frames</small></div>
+    <div class="t-item">Pre-Lit LEDs Inside<small>Edge-lit, power supply included</small></div>
+    <div class="t-item">Cut to Your Size<small>Every kit made to order</small></div>
+    <div class="t-item">Ships Nationwide<small>Packed in 4&ndash;6 pieces</small></div>
   </div>
 </div>
 
-<section class="why">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Why Choose DIY Sign Guy</p>
-      <h2>Everything you need to build with confidence</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item"><span class="tag">Sizing</span><p>Custom sizes for wall, pole, and pylon signs — not one-size-fits-all.</p></div>
-      <div class="why-item"><span class="tag">Lighting</span><p>LED lighting systems built for outdoor, all-weather visibility.</p></div>
-      <div class="why-item"><span class="tag">Frames</span><p>Heavy-duty aluminum sign cabinet frames and mounting hardware.</p></div>
-      <div class="why-item"><span class="tag">Shipping</span><p>Nationwide shipping, installed locally by your own contractor.</p></div>
-      <div class="why-item"><span class="tag">Support</span><p>Sign-building coaching from Dean before you ever place an order.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
+<section>
   <div class="wrap about-grid">
-    <div class="about-image">
-      <img src="images/dean-hero.jpg" alt="Dean smiling with a steel DIY sign kit piece">
-    </div>
-    <div>
-      <blockquote>"Build it. Light it. Own it. That's the whole idea."</blockquote>
-      <cite>— Dean, DIY Sign Guy</cite>
-      <p class="bio">DIY Sign Guy helps business owners, contractors, installers, and do-it-yourself customers save money on outdoor LED sign kits, completed lighted sign cabinets, pylon pole signs, mounting hardware, coating options, and sign-building coaching. Custom sizes. LED lighting. Aluminum frames. Nationwide shipping.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Ready to price out your sign?</h2>
-    <p>Tell us your sign size, mounting needs, and shipping ZIP code for a free quote.</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="contact.html">Get Your Free Quote</a>
-      <a class="btn btn-outline" href="kits-pricing.html">Browse Kits &amp; Pricing</a>
+    <img class="ph-img round-img" src="images/meet-the-sign-guy.jpg" alt="Dean, the DIY Sign Guy, in his shop holding a Made-in-USA aluminum sign extrusion — Built by You, Backed by Me">
+    <div class="about-copy">
+      <span class="kicker">Meet the Sign Guy</span>
+      <h2 class="sec-title">20+ Years of Building Signs. One Simple Idea.</h2>
+      <p>I've spent 20+ years in the sign business, and in that time I've watched too many small business owners walk away from a lighted sign because of the price tag — not the sign, the <b>markup</b>.</p>
+      <p>Here's the truth: when you buy from a local sign company, you're paying for their showroom, their salespeople, and their install crew. The sign itself is the smallest part of the bill.</p>
+      <p>So I do it differently. <b>I build your sign cabinet in my shop</b> — cut from 26-foot sticks of extruded aluminum, corners welded by hand, LEDs and power supply fitted to your exact size — and ship the complete kit straight to you. You handle the install, and you keep the difference. That's usually <b>up to 60% off local retail</b>.</p>
+      <p>No showroom. No sales office. Just a guy who's been building signs for two decades, and a better way for you to get one.</p>
+      <a href="kits.html" class="btn btn-amber" style="margin-top:8px;">See How Our Kits Work</a>
     </div>
   </div>
 </section>
 
-<footer>
+<section class="alt">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="logo" style="font-size:18px; margin-bottom:10px;"><span class="sign">DIY</span><span class="guy">SignGuy</span></div>
-        <a class="email" href="mailto:dean@diysignguy.com" style="color:var(--neon-blue); text-decoration:none; font-size:14px;">dean@diysignguy.com</a>
+    <span class="kicker">What We Offer</span>
+    <h2 class="sec-title">Three Cabinet Depths. Every Size You Need.</h2>
+    <p class="sec-sub">All three are the same heavy-duty extruded aluminum, welded corners, and Pre-Lit LED system — the difference is depth and how you plan to mount it.</p>
+    <div class="prod-grid">
+      <div class="prod-card-wrap">
+        <span class="badge">&#9733; Best Seller</span>
+        <div class="prod">
+          <img class="ph-img card-img" src="images/storefront-cabinet-blank.jpg" alt="Blank LED-lighted sign cabinet glowing on a brick storefront at night, ready for graphics">
+          <div class="prod-body">
+            <div class="size">4" <small>Wide Cabinet</small></div>
+            <div class="use">Wall Mount</div>
+            <p>Our most popular kit. A clean, low-profile lighted sign that mounts flat to your building — perfect for storefronts, offices, and retail strips.</p>
+            <a href="kits.html" class="btn btn-amber btn-sm">Learn More</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <ul class="footer-links">
-          <li><a href="kits-pricing.html">DIY Kits &amp; Pricing</a></li>
-          <li><a href="pole-pylon-sign-kit.html">Pole &amp; Pylon Signs</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="social-row">
-          <a href="https://www.facebook.com/diysignguy.com">Facebook</a>
-          <a href="https://www.instagram.com/diysignguy">Instagram</a>
-          <a href="https://www.tiktok.com/@diysignguy">TikTok</a>
-          <a href="https://www.pinterest.com/diysignguy">Pinterest</a>
-          <a href="https://www.youtube.com/diysignguy">YouTube</a>
-          <a href="https://www.yelp.com/biz/diysignguy">Yelp</a>
-          <a href="https://www.linkedin.com/diysignguy">LinkedIn</a>
-          <a href="https://www.discord.com/users/diysignguy">Discord</a>
+      <div class="prod-card-wrap">
+        <div class="prod">
+          <img class="ph-img card-img" src="images/completed-cabinet-wild-peak.jpg" alt="Completed DIY Sign Guy lighted cabinet with an installed graphics face, lit up and glowing">
+          <div class="prod-body">
+            <div class="size">7" <small>Wide Cabinet</small></div>
+            <div class="use">Wall Mount &middot; Double-Pole</div>
+            <p>The versatile middle weight. Deep enough for double-pole and post-and-panel installs, still clean on a wall.</p>
+            <a href="kits.html" class="btn btn-amber btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="prod-card-wrap">
+        <div class="prod">
+          <img class="ph-img card-img" src="images/pylon-signs-group.jpg" alt="Five outdoor LED pylon pole signs lit at dusk in front of a general store, showing different sizes and colors">
+          <div class="prod-body">
+            <div class="size">10" <small>Wide Cabinet</small></div>
+            <div class="use">Pylon &middot; Single-Pole</div>
+            <p>Our heavy-duty cabinet built for pylon and single-pole signs — big, high-visibility signs you see from the road.</p>
+            <a href="pylon-signs.html" class="btn btn-amber btn-sm">Learn More</a>
+          </div>
         </div>
       </div>
     </div>
-    <p class="footer-fine">© DIY Sign Guy. Build it. Light it. Own it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">How It Works</span>
+    <h2 class="sec-title">From Our Shop to Your Wall in Four Steps</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Tell Us Your Size</h3><p>Send us your dimensions and where the sign is going: wall, posts, or pylon pole.</p></div>
+      <div class="step"><div class="num">2</div><h3>We Build Your Kit</h3><p>Cut from 26-foot aluminum sticks, corners welded, edge-lit LEDs fitted to your sign.</p></div>
+      <div class="step"><div class="num">3</div><h3>It Ships to Your Door</h3><p>Arrives in 4&ndash;6 pieces sized for safe shipping, with the right 12V power supply included.</p></div>
+      <div class="step"><div class="num">4</div><h3>You Install &amp; Light It Up</h3><p>Assemble the pre-fit pieces, mount it, plug it in. A professional sign at a DIY price.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="kicker">From the Shop</span>
+    <h2 class="sec-title">Sign Advice From 23 Years in the Business</h2>
+    <p class="sec-sub">Straight answers on choosing, buying, and installing your own business sign.</p>
+    <div class="blog-grid">
+      <a class="post-card" href="blog/which-sign-cabinet-do-i-need.html">
+        <img class="ph-img post-img" src="images/diy-sign-kits-overview.jpg" alt="DIY Sign Kits overview — wall sign kits, pole and pylon sign kits, everything you need in one kit">
+        <div class="post-body">
+          <span class="tag">Buying Guide</span>
+          <h3>Which Sign Cabinet Do I Need — 4", 7", or 10"?</h3>
+          <p>The simple rule of thumb we use to match every customer to the right cabinet, based on where the sign is going.</p>
+        </div>
+      </a>
+      <div class="post-card soon">
+        <img class="ph-img post-img" src="images/completed-lighted-cabinets.jpg" alt="Four completed outdoor LED lighted sign cabinets with graphics for different businesses, displayed at dusk">
+        <div class="post-body">
+          <span class="tag">Coming Soon</span>
+          <h3>How Much Does a Lighted Business Sign Really Cost?</h3>
+          <p>What local sign shops charge, where that money actually goes, and how the DIY kit math works out.</p>
+        </div>
+      </div>
+      <div class="post-card soon">
+        <img class="ph-img post-img" src="images/pylon-sign-kit.jpg" alt="DIY single pole pylon sign kit with features list — shipped nationwide, offered in kit or complete">
+        <div class="post-body">
+          <span class="tag">Coming Soon</span>
+          <h3>DIY Sign Installation: What to Expect for Each Mount Type</h3>
+          <p>Wall mount, post &amp; panel, double pole, and pylon — what each install involves before you order.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="cta-band">
+  <div class="wrap">
+    <div class="big">Ready to see your price? Every sign is cut to order — tell us your size and save <em>up to 60%</em> over local retail.</div>
+    <a href="contact.html" class="btn btn-amber">Contact Now for a Quote</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>DIY SIGN GUY</h2>
+        <p style="max-width:300px;">Pre-lit aluminum sign cabinet kits, custom cut to your size and shipped nationwide. 20+ years in the sign business.</p>
+        
+        <div class="soc-row">
+          <a class="soc" href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a class="soc" href="#" title="Instagram" aria-label="Instagram">IG</a>
+          <a class="soc" href="#" title="TikTok" aria-label="TikTok">TT</a>
+          <a class="soc" href="#" title="YouTube" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h2>Our Kits</h2>
+        <a href="kits.html">4" Wall Mount Cabinet</a>
+        <a href="kits.html">7" Wall / Double-Pole Cabinet</a>
+        <a href="kits.html">10" Pylon / Single-Pole Cabinet</a>
+      </div>
+      <div>
+        <h2>Learn</h2>
+        <a href="pylon-signs.html">Pylon Pole Signs</a>
+        <a href="faq.html">Questions &amp; Answers</a>
+        <a href="blog/which-sign-cabinet-do-i-need.html">Which Cabinet Do I Need?</a>
+      </div>
+      <div>
+        <h2>Get Started</h2>
+        <a href="contact.html">Request a Free Quote</a>
+        <a href="kits.html">Shop Our Kits</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 DIY Sign Guy &middot; diysignguy.com</div>
+      <div><a href="privacy.html" style="display:inline;margin:0 14px 0 0;">Privacy Policy</a><a href="terms.html" style="display:inline;margin:0;">Terms of Use</a></div>
+      <div>Build It. Light It. Own It.</div>
+    </div>
   </div>
 </footer>
-
-<a class="floating-cta" href="contact.html">Get Free Quote</a>
-
 </body>
 </html>
