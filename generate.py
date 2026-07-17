@@ -259,7 +259,7 @@ def page(filename, title, desc, active, content, root=""):
     print("wrote", filename)
 
 QUOTE_FORM = """
-    <form class="qform" action="https://formsubmit.co/fortunefivesignco@gmail.com" method="POST">
+    <form class="qform" action="https://formsubmit.co/b9ec6607eb4f08caecaae7e29c02ecb5" method="POST">
       <input type="hidden" name="_subject" value="New Quote Request — diysignguy.com">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
