@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Order Form | DIY Sign Guy</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#080808;--panel:#050505;--panel2:#101216;
+    --blue:#2f95ff;--blue-deep:#1673e6;--orange:#ff9130;--gold:#ffc24d;--red:#ff5252;
+    --muted:#9aa6b5;--line:#20242b;--glow:rgba(47,149,255,.4);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;background:var(--black);color:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.01em;}
+  h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.05;}
+  h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:700;line-height:1.1;margin-bottom:14px;}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  .pagehead{background:radial-gradient(900px 300px at 50% -20%,rgba(47,149,255,.16),transparent 60%),#0a0a0c;
+    border-bottom:1px solid var(--line);padding:44px 24px;text-align:center;}
+  .tri .c1{color:var(--orange);} .tri .c2{color:var(--blue);text-shadow:0 0 24px var(--glow);} .tri .c3{color:var(--red);}
+  .pagehead p{color:var(--muted);max-width:680px;margin:12px auto 0;font-size:1.02rem;}
+  .kick{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+  section{padding:44px 24px;max-width:880px;margin:0 auto;}
+  form.qform{background:#101216;border:1px solid var(--line);border-radius:16px;padding:30px;display:grid;gap:16px;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .frow3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;}
+  .field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:#e6ebf2;}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #333c48;border-radius:9px;font-size:.95rem;font-family:'Inter',sans-serif;background:#0a0b0e;color:#fff;}
+  .field textarea{min-height:120px;resize:vertical;}
+  .fine{font-size:.78rem;color:var(--muted);}
+  .privacy{background:rgba(47,149,255,.08);border:1px solid #1f3d5e;border-radius:12px;padding:16px 20px;font-weight:600;color:#cfe4ff;margin-bottom:24px;}
+  .notice{border-left:3px solid var(--gold);background:rgba(255,194,77,.07);padding:14px 18px;border-radius:8px;color:#d9c9a3;font-size:.93rem;}
+  .checkgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .checkgrid label{display:flex;gap:10px;align-items:center;background:#0d0f13;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.9rem;cursor:pointer;}
+  .checkgrid input{width:18px;height:18px;accent-color:var(--blue);flex:none;}
+  .btn{display:inline-block;text-align:center;background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;
+    padding:14px 26px;border-radius:11px;box-shadow:0 6px 20px var(--glow);transition:transform .2s;border:none;cursor:pointer;font-size:1rem;font-family:'Inter',sans-serif;}
+  .btn:hover{transform:translateY(-2px);}
+  footer{background:var(--panel);border-top:1px solid var(--line);padding:26px 24px;color:var(--muted);font-size:.85rem;text-align:center;}
+  footer a{color:var(--gold);}
+  @media(max-width:700px){.frow,.frow3,.checkgrid{grid-template-columns:1fr;}section{padding:36px 18px;}}
+</style>
+</head>
+<body>
+<div class="pagehead">
+  <span class="kick">Let's Build Your Sign</span>
+  <h1 class="tri"><b class="c1">DIY</b> <b class="c2">SIGN</b> <b class="c3">GUY.COM</b></h1>
+  <p style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;color:#fff;margin-top:14px;">Sign Order Form</p>
+  <p>Confirm your order details and shipping address here. Dean reviews every order personally and sends your invoice by email — your build starts once it's paid.</p>
+</div>
+<section>
+  <div class="privacy">&#128274; I do not sell your information. All your information you give me is kept private. I will not sell your information.</div>
+  <form class="qform" id="order-form" action="https://formsubmit.co/b9ec6607eb4f08caecaae7e29c02ecb5" method="POST">
+    <input type="hidden" name="_subject" value="NEW ORDER — DIY Sign Guy">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://diysignguy.com/office/thanks.html">
+    <input type="hidden" name="_autoresponse" value="Thank you — your DIY Sign Guy order details were received. Dean will review and email your invoice. Your build begins once the invoice is paid.">
+    <input type="hidden" name="document" value="Sign Order Form">
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <h2 style="margin-bottom:0;">1. Who's Ordering</h2>
+    <div class="frow">
+      <div class="field"><label for="o-name">Your name *</label><input id="o-name" type="text" name="full_name" required autocomplete="name"></div>
+      <div class="field"><label for="o-biz">Business name *</label><input id="o-biz" type="text" name="business_name" required autocomplete="organization"></div>
+    </div>
+    <div class="frow">
+      <div class="field"><label for="o-email">Email address *</label><input id="o-email" type="email" name="email" required autocomplete="email"></div>
+      <div class="field"><label for="o-phone">Phone number (optional)</label><input id="o-phone" type="tel" name="phone" autocomplete="tel"></div>
+    </div>
+
+    <h2 style="margin-bottom:0;">2. Shipping Address</h2>
+    <div class="field"><label for="o-street">Street address *</label><input id="o-street" type="text" name="ship_street" required autocomplete="street-address"></div>
+    <div class="frow3">
+      <div class="field"><label for="o-city">City *</label><input id="o-city" type="text" name="ship_city" required autocomplete="address-level2"></div>
+      <div class="field"><label for="o-state">State *</label><input id="o-state" type="text" name="ship_state" required autocomplete="address-level1"></div>
+      <div class="field"><label for="o-zip">ZIP *</label><input id="o-zip" type="text" name="ship_zip" required autocomplete="postal-code"></div>
+    </div>
+
+    <h2 style="margin-bottom:0;">3. What You're Ordering</h2>
+    <div class="checkgrid">
+      <label><input type="checkbox" name="item_wall_kit" value="yes"> Wall sign cabinet kit</label>
+      <label><input type="checkbox" name="item_pole_kit" value="yes"> Pole / pylon sign kit</label>
+      <label><input type="checkbox" name="item_graphics" value="yes"> Faces / graphics</label>
+      <label><input type="checkbox" name="item_hardware" value="yes"> Install hardware &amp; accessories</label>
+    </div>
+    <div class="frow">
+      <div class="field"><label for="o-quote">Quote / reference number</label><input id="o-quote" type="text" name="quote_number" placeholder="From your written quote, if you have one"></div>
+      <div class="field"><label for="o-coupon">Coupon code</label><input id="o-coupon" type="text" name="coupon_code" placeholder="If Dean sent you one"></div>
+    </div>
+    <div class="field"><label for="o-details">Order details *</label>
+      <textarea id="o-details" name="order_details" required placeholder="Sizes, depth (4&quot; / 7&quot; / 10&quot;), single or double-sided, color (mill or black standard), graphics details, and anything else from your quote."></textarea>
+    </div>
+    <div class="notice"><b>How ordering works:</b> your written quote defines the products and prices. After you submit this form, Dean emails your invoice — payment is secure by card through Stripe. Prepayment is required; your build begins once the invoice is paid. Faces and graphics are not included with kits unless they're on your quote.</div>
+    <button type="submit" class="btn">Submit My Order Details</button>
+    <div class="fine">Required fields marked *. Submitting this form doesn't charge you anything — your invoice comes separately by email.</div>
+  </form>
+</section>
+<footer>DIY Sign Guy &middot; <a href="https://diysignguy.com">diysignguy.com</a> &middot; <a href="https://diysignguy.com/privacy.html">Privacy</a> &middot; <a href="https://diysignguy.com/terms.html">Terms</a></footer>
+</body>
+</html>

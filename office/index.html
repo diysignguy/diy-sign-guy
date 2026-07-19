@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back Office | DIY Sign Guy</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#080808;--panel:#050505;--panel2:#101216;
+    --blue:#2f95ff;--blue-deep:#1673e6;--orange:#ff9130;--gold:#ffc24d;--red:#ff5252;--stripe:#635bff;
+    --muted:#9aa6b5;--line:#20242b;--glow:rgba(47,149,255,.4);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;background:var(--black);color:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.01em;}
+  h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.05;}
+  h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;margin-bottom:6px;}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  .pagehead{background:radial-gradient(900px 300px at 50% -20%,rgba(47,149,255,.16),transparent 60%),#0a0a0c;
+    border-bottom:1px solid var(--line);padding:40px 24px;text-align:center;}
+  .tri .c1{color:var(--orange);} .tri .c2{color:var(--blue);text-shadow:0 0 24px var(--glow);} .tri .c3{color:var(--red);}
+  .kick{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+  .pagehead p{color:var(--muted);max-width:640px;margin:10px auto 0;}
+  main{max-width:1000px;margin:0 auto;padding:36px 24px 60px;display:grid;gap:26px;}
+  .panel{background:#101216;border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .panel .sub{color:var(--muted);font-size:.92rem;margin-bottom:16px;}
+  .btnrow{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-align:center;background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;
+    padding:12px 20px;border-radius:11px;box-shadow:0 6px 20px var(--glow);transition:transform .2s;border:none;cursor:pointer;font-size:.95rem;font-family:'Inter',sans-serif;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-stripe{background:linear-gradient(160deg,#7a73ff,#5851e8);box-shadow:0 6px 20px rgba(99,91,255,.35);}
+  .btn-ghost{background:#181b21;border:1px solid #333c48;box-shadow:none;color:#dfe6ef;}
+  .steps{margin:14px 0 0 20px;color:#c3ccd9;font-size:.93rem;display:grid;gap:7px;}
+  .steps b{color:#fff;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+  .field label{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px;color:#e6ebf2;}
+  .field input,.field textarea{width:100%;padding:11px 13px;border:1px solid #333c48;border-radius:9px;font-size:.92rem;font-family:'Inter',sans-serif;background:#0a0b0e;color:#fff;}
+  .linkout{margin-top:14px;background:#0a0b0e;border:1px dashed #333c48;border-radius:9px;padding:12px 14px;font-size:.83rem;color:var(--gold);word-break:break-all;min-height:44px;}
+  .coupon{display:flex;align-items:center;gap:14px;background:#0d0f13;border:1px solid #3a3320;border-radius:12px;padding:14px 18px;}
+  .coupon code{font-size:1.3rem;font-weight:800;color:var(--gold);letter-spacing:.08em;}
+  .coupon span{color:var(--muted);font-size:.9rem;}
+  .copied{color:#5dd28e !important;border-color:#2b5940 !important;}
+  .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#141a22;color:var(--gold);margin-bottom:10px;}
+  footer{background:var(--panel);border-top:1px solid var(--line);padding:24px;color:var(--muted);font-size:.85rem;text-align:center;}
+  footer a{color:var(--gold);}
+  @media(max-width:700px){.frow{grid-template-columns:1fr;}main{padding:28px 16px 48px;}}
+</style>
+</head>
+<body>
+<div class="pagehead">
+  <span class="kick">Private &middot; Not Linked From The Site</span>
+  <h1 class="tri"><b class="c1">DIY</b> <b class="c2">SIGN</b> <b class="c3">GUY.COM</b></h1>
+  <p style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;color:#fff;margin-top:12px;">Dean's Back Office</p>
+  <p>Everything for running the money side in one place: invoices and payments through Stripe, signable documents, and your customer forms.</p>
+</div>
+<main>
+
+  <div class="panel">
+    <span class="tag">Money &middot; Stripe</span>
+    <h2>Invoices &amp; Payments</h2>
+    <p class="sub">Stripe handles the cards so you never touch card numbers. These open your Stripe dashboard (log in with your Stripe account).</p>
+    <div class="btnrow">
+      <a class="btn btn-stripe" href="https://dashboard.stripe.com/invoices/create" target="_blank" rel="noopener">+ Create an Invoice</a>
+      <a class="btn btn-stripe" href="https://dashboard.stripe.com/payment-links/create" target="_blank" rel="noopener">+ Create a Payment Link</a>
+      <a class="btn btn-ghost" href="https://dashboard.stripe.com/invoices" target="_blank" rel="noopener">All Invoices</a>
+      <a class="btn btn-ghost" href="https://dashboard.stripe.com/payments" target="_blank" rel="noopener">Payments Received</a>
+      <a class="btn btn-ghost" href="https://dashboard.stripe.com/customers" target="_blank" rel="noopener">Customer List</a>
+    </div>
+    <ol class="steps">
+      <li><b>Create an Invoice</b> &rarr; add the customer's name and email.</li>
+      <li>Add line items exactly matching the <b>written quote</b> (kit, graphics, shipping). Apply any coupon as a discount line.</li>
+      <li>Send it &mdash; Stripe emails the customer a <b>pay-by-card page</b>. No card info ever goes through you or the website.</li>
+      <li>You get an email when it's paid &rarr; <b>build begins</b>.</li>
+      <li>Payment Links are for simple flat amounts (deposits, hardware) you can text or message to anyone.</li>
+    </ol>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Documents &middot; E-Signature</span>
+    <h2>Send an Agreement to Sign</h2>
+    <p class="sub">Fill in what you know and this builds a personalized signing link — the customer opens it with their project details already filled in, reads your terms and disclosures, and signs with their typed legal name. The signed copy comes to your email with date and time.</p>
+    <div class="frow">
+      <div class="field"><label for="g-quote">Quote / reference #</label><input id="g-quote" type="text" placeholder="Q-1001"></div>
+      <div class="field"><label for="g-amount">Quoted total</label><input id="g-amount" type="text" placeholder="$1,850"></div>
+    </div>
+    <div class="frow">
+      <div class="field"><label for="g-name">Customer name</label><input id="g-name" type="text"></div>
+      <div class="field"><label for="g-biz">Business name</label><input id="g-biz" type="text"></div>
+    </div>
+    <div class="field" style="margin-top:6px;"><label for="g-project">Project description</label><input id="g-project" type="text" placeholder="4&quot; Slimline wall cabinet kit, 3ft x 8ft, double-sided, black"></div>
+    <div class="linkout" id="g-out">Your personalized signing link appears here&hellip;</div>
+    <div class="btnrow" style="margin-top:14px;">
+      <button class="btn" id="g-copy">Copy Signing Link</button>
+      <a class="btn btn-ghost" href="agreement.html" target="_blank" rel="noopener">Preview the Agreement Page</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Forms</span>
+    <h2>Customer Forms — Copy &amp; Send</h2>
+    <p class="sub">Paste these links into an email, Facebook message, or text. Submissions come straight to your email inbox.</p>
+    <div class="btnrow">
+      <button class="btn" data-copy="https://diysignguy.com/office/order-form.html">Copy: Order Form</button>
+      <button class="btn" data-copy="https://diysignguy.com/office/agreement.html">Copy: Blank Agreement</button>
+      <button class="btn" data-copy="https://diysignguy.com/contact.html">Copy: Quote Request (Contact)</button>
+      <a class="btn btn-ghost" href="order-form.html" target="_blank" rel="noopener">Preview Order Form</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Shipping &middot; FedEx Ground</span>
+    <h2>Ship an Order</h2>
+    <p class="sub">Type or paste the customer's address from the order email, click <b>Copy for FedEx</b>, then open Ship Manager and paste as you go — no retyping from memory. You add the weight and box size when you pack it.</p>
+    <div class="frow">
+      <div class="field"><label for="s-name">Customer name</label><input id="s-name" type="text"></div>
+      <div class="field"><label for="s-biz">Business name</label><input id="s-biz" type="text"></div>
+    </div>
+    <div class="field" style="margin-top:6px;"><label for="s-street">Street address</label><input id="s-street" type="text"></div>
+    <div class="frow" style="grid-template-columns:2fr 1fr 1fr;">
+      <div class="field"><label for="s-city">City</label><input id="s-city" type="text"></div>
+      <div class="field"><label for="s-state">State</label><input id="s-state" type="text"></div>
+      <div class="field"><label for="s-zip">ZIP</label><input id="s-zip" type="text"></div>
+    </div>
+    <div class="field" style="margin-top:6px;"><label for="s-phone">Phone (FedEx requires one — use theirs from the order, or yours)</label><input id="s-phone" type="text"></div>
+    <div class="linkout" id="s-out" style="white-space:pre-line;">Fill in the address and it appears here, FedEx-ready&hellip;</div>
+    <div class="btnrow" style="margin-top:14px;">
+      <button class="btn" id="s-copy">Copy for FedEx</button>
+      <a class="btn btn-ghost" href="https://www.fedex.com/en-us/online/shipping.html" target="_blank" rel="noopener">Open FedEx Ship Manager &rarr;</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Deals</span>
+    <h2>Active Coupon Codes</h2>
+    <p class="sub">Honored manually on written quotes — add as a discount line on the Stripe invoice. Customers ask for codes by commenting on the deal post or messaging the page.</p>
+    <div class="coupon"><code>DIYGUY</code><span>5% off first kit order &middot; one kit per customer &middot; good until you pull it</span></div>
+  </div>
+
+</main>
+<footer>Bookmark this page &middot; it's unlisted and hidden from search engines &middot; <a href="https://diysignguy.com">diysignguy.com</a></footer>
+<script>
+(function(){
+  var out=document.getElementById('g-out');
+  var ids={quote:'g-quote',amount:'g-amount',name:'g-name',biz:'g-biz',project:'g-project'};
+  function build(){
+    var p=new URLSearchParams();
+    for(var k in ids){var v=document.getElementById(ids[k]).value.trim();if(v)p.set(k,v);}
+    var qs=p.toString();
+    return 'https://diysignguy.com/office/agreement.html'+(qs?'?'+qs:'');
+  }
+  function upd(){out.textContent=build();}
+  for(var k in ids){document.getElementById(ids[k]).addEventListener('input',upd);}
+  upd();
+  function flash(btn){var t=btn.textContent;btn.textContent='✓ Copied!';btn.classList.add('copied');setTimeout(function(){btn.textContent=t;btn.classList.remove('copied');},1600);}
+  document.getElementById('g-copy').addEventListener('click',function(){
+    navigator.clipboard.writeText(build()).then(flash.bind(null,this));},false);
+  var sids=['s-name','s-biz','s-street','s-city','s-state','s-zip','s-phone'];
+  var sout=document.getElementById('s-out');
+  function shipBlock(){
+    var v={};for(var i=0;i<sids.length;i++){v[sids[i]]=document.getElementById(sids[i]).value.trim();}
+    var lines=[];
+    if(v['s-name'])lines.push(v['s-name']);
+    if(v['s-biz'])lines.push(v['s-biz']);
+    if(v['s-street'])lines.push(v['s-street']);
+    var csz=[v['s-city'],v['s-state']].filter(Boolean).join(', ');
+    if(v['s-zip'])csz=(csz?csz+' ':'')+v['s-zip'];
+    if(csz)lines.push(csz);
+    if(v['s-phone'])lines.push('Phone: '+v['s-phone']);
+    return lines.join('\n');
+  }
+  function supd(){var b=shipBlock();sout.textContent=b||'Fill in the address and it appears here, FedEx-ready…';}
+  for(var i=0;i<sids.length;i++){document.getElementById(sids[i]).addEventListener('input',supd);}
+  document.getElementById('s-copy').addEventListener('click',function(){
+    navigator.clipboard.writeText(shipBlock()).then(flash.bind(null,this));});
+  var bs=document.querySelectorAll('[data-copy]');
+  for(var i=0;i<bs.length;i++){bs[i].addEventListener('click',function(){
+    navigator.clipboard.writeText(this.getAttribute('data-copy')).then(flash.bind(null,this));});}
+})();
+</script>
+</body>
+</html>
