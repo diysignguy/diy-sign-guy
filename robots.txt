@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diysignguy.com/sitemap.xml
