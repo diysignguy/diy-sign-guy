@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /office/
 Sitemap: https://diysignguy.com/sitemap.xml
