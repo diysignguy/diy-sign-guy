@@ -46,7 +46,7 @@ gtag('config', 'G-69T7JQ3J6S');
   .imgnote{display:inline-block;margin-top:14px;font-size:.72rem;color:var(--gold);border:1px dashed #4d4325;padding:4px 12px;border-radius:999px;}
   /* NAV */
   nav.mainnav{background:#0b0c0f;border-top:2px solid var(--line);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;}
-  .navrow{display:flex;justify-content:center;align-items:stretch;flex-wrap:nowrap;}
+  .navrow{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;}
   .navrow a{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:600;font-size:1.06rem;letter-spacing:.05em;text-transform:uppercase;
     color:#cdd5e0;padding:16px 20px;border-bottom:3px solid transparent;white-space:nowrap;}
   .navrow a:hover{color:#fff;background:#14161b;}
@@ -61,7 +61,7 @@ gtag('config', 'G-69T7JQ3J6S');
     .mobnav a.active{color:var(--gold);}
   }
   /* FB STRIP */
-  .fbstrip{background:linear-gradient(90deg,var(--fbc),#0d5fd0);color:#fff;text-align:center;padding:13px 18px;font-weight:700;
+  .fbstrip{background:linear-gradient(90deg,#1465cc,#0d5fd0);color:#fff;text-align:center;padding:13px 18px;font-weight:700;
     display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:.98rem;}
   .fbstrip a{background:#0a2540;padding:8px 16px;border-radius:8px;font-size:.84rem;font-weight:700;}
   .fbi{width:18px;height:18px;flex:none;vertical-align:-.18em;display:inline-block;}
@@ -86,11 +86,11 @@ gtag('config', 'G-69T7JQ3J6S');
   .card .use{color:var(--gold);font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;font-weight:700;margin-bottom:10px;font-family:'Inter',sans-serif;}
   .card p{color:var(--muted);font-size:.92rem;flex:1;margin-bottom:16px;}
   .badge{position:absolute;top:12px;left:12px;background:#141a22;color:var(--red);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px;z-index:2;}
-  .btn{display:inline-block;text-align:center;background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;
+  .btn{display:inline-block;text-align:center;background:linear-gradient(160deg,var(--blue-deep),#0d5fd0);color:#fff;font-weight:700;
     padding:13px 26px;border-radius:11px;box-shadow:0 6px 20px var(--glow);transition:transform .2s;border:none;cursor:pointer;font-size:1rem;font-family:'Inter',sans-serif;}
   .btn:hover{transform:translateY(-2px);}
   .btn-sm{padding:10px 18px;font-size:.88rem;}
-  .btn-fb{background:var(--fbc);box-shadow:0 6px 20px rgba(24,119,242,.35);}
+  .btn-fb{background:#1465cc;box-shadow:0 6px 20px rgba(24,119,242,.35);}
   /* LISTS */
   .klist{list-style:none;display:grid;gap:12px;margin-top:24px;max-width:820px;}
   .klist li{display:flex;gap:14px;align-items:flex-start;background:#101216;border:1px solid var(--line);border-radius:12px;padding:15px 18px;}
@@ -123,6 +123,8 @@ gtag('config', 'G-69T7JQ3J6S');
   .privacy{background:rgba(47,149,255,.08);border:1px solid #1f3d5e;border-radius:12px;padding:16px 20px;font-weight:600;color:#cfe4ff;margin-bottom:24px;max-width:880px;}
   .helppanel{background:#101216;border:1px solid var(--line);border-radius:16px;padding:26px;}
   .helppanel h3{margin-bottom:10px;}
+  .helppanel h2{margin-bottom:10px;font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
   .helppanel p{color:var(--muted);font-size:.92rem;margin-bottom:12px;}
   .trust{background:var(--gold);color:#141a22;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;}
   .trust div{padding:16px 10px;font-weight:700;font-size:.92rem;}
@@ -181,7 +183,7 @@ gtag('config', 'G-69T7JQ3J6S');
 <div class="ctaband"><h2>Ready to get your written quote?</h2><p>Every kit is prepared to order. Tell us about your project and we'll answer with a straight, written quote.</p><a class="btn" href="contact.html">Contact DIY Sign Guy</a></div>
 <footer><div class="footwrap">
   <div>&copy; 2026 DIY Sign Guy &middot; DIY LED sign kits, pole &amp; pylon kits, graphics and install hardware &mdash; <b>shipped nationwide across the United States</b>. Since 2004.</div>
-  <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> For daily, weekly &amp; monthly deals and coupon codes — please <a href="https://www.facebook.com/diysignguy" target="_blank" rel="noopener">like &amp; follow us on Facebook</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></div>
+  <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> For daily, weekly &amp; monthly deals and coupon codes — please <a href="https://www.facebook.com/diysignguy" target="_blank" rel="noopener">like &amp; follow us on Facebook</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="accessibility.html">Accessibility</a></div>
 </div></footer>
 </body>
 </html>
