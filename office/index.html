@@ -47,16 +47,20 @@
   footer{background:var(--panel);border-top:1px solid var(--line);padding:24px;color:var(--muted);font-size:.85rem;text-align:center;}
   footer a{color:var(--gold);}
   @media(max-width:700px){.frow{grid-template-columns:1fr;}main{padding:28px 16px 48px;}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+  .skip{position:absolute;left:-9999px;top:0;background:#ffc24d;color:#141a22;padding:12px 20px;font-weight:700;z-index:200;}
+  .skip:focus{left:0;}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <div class="pagehead">
   <span class="kick">Private &middot; Not Linked From The Site</span>
   <h1 class="tri"><b class="c1">DIY</b> <b class="c2">SIGN</b> <b class="c3">GUY.COM</b></h1>
   <p style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;color:#fff;margin-top:12px;">Dean's Back Office</p>
   <p>Everything for running the money side in one place: invoices and payments through Stripe, signable documents, and your customer forms.</p>
 </div>
-<main>
+<main id="main">
 
   <div class="panel">
     <span class="tag">Money &middot; Stripe</span>
@@ -140,7 +144,7 @@
   </div>
 
 </main>
-<footer>Bookmark this page &middot; it's unlisted and hidden from search engines &middot; <a href="https://diysignguy.com">diysignguy.com</a></footer>
+<footer><nav aria-label="Site and legal links">Bookmark this page &middot; it's unlisted and hidden from search engines &middot; <a href="https://diysignguy.com">diysignguy.com</a></nav></footer>
 <script>
 (function(){
   var out=document.getElementById('g-out');

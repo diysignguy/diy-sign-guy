@@ -43,15 +43,20 @@
   footer{background:var(--panel);border-top:1px solid var(--line);padding:26px 24px;color:var(--muted);font-size:.85rem;text-align:center;}
   footer a{color:var(--gold);}
   @media(max-width:700px){.frow,.frow3,.checkgrid{grid-template-columns:1fr;}section{padding:36px 18px;}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+  .skip{position:absolute;left:-9999px;top:0;background:#ffc24d;color:#141a22;padding:12px 20px;font-weight:700;z-index:200;}
+  .skip:focus{left:0;}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 <div class="pagehead">
   <span class="kick">Let's Build Your Sign</span>
   <h1 class="tri"><b class="c1">DIY</b> <b class="c2">SIGN</b> <b class="c3">GUY.COM</b></h1>
   <p style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;color:#fff;margin-top:14px;">Sign Order Form</p>
   <p>Confirm your order details and shipping address here. Dean reviews every order personally and sends your invoice by email — your build starts once it's paid.</p>
 </div>
+<main id="main">
 <section>
   <div class="privacy">&#128274; I do not sell your information. All your information you give me is kept private. I will not sell your information.</div>
   <form class="qform" id="order-form" action="https://formsubmit.co/b9ec6607eb4f08caecaae7e29c02ecb5" method="POST">
@@ -100,6 +105,7 @@
     <div class="fine">Required fields marked *. Submitting this form doesn't charge you anything — your invoice comes separately by email.</div>
   </form>
 </section>
-<footer>DIY Sign Guy &middot; <a href="https://diysignguy.com">diysignguy.com</a> &middot; <a href="https://diysignguy.com/privacy.html">Privacy</a> &middot; <a href="https://diysignguy.com/terms.html">Terms</a></footer>
+</main>
+<footer><nav aria-label="Site and legal links">DIY Sign Guy &middot; <a href="https://diysignguy.com">diysignguy.com</a> &middot; <a href="https://diysignguy.com/privacy.html">Privacy</a> &middot; <a href="https://diysignguy.com/terms.html">Terms</a> &middot; <a href="https://diysignguy.com/accessibility.html">Accessibility</a></nav></footer>
 </body>
 </html>

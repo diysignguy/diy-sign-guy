@@ -18,15 +18,20 @@
   .check{width:74px;height:74px;border-radius:50%;background:linear-gradient(160deg,var(--blue),var(--blue-deep));display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto;box-shadow:0 0 30px var(--glow);}
   p{color:var(--muted);margin-bottom:12px;}
   .btn{display:inline-block;margin-top:16px;background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;padding:13px 26px;border-radius:11px;text-decoration:none;box-shadow:0 6px 20px var(--glow);}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+  .skip{position:absolute;left:-9999px;top:0;background:#ffc24d;color:#141a22;padding:12px 20px;font-weight:700;z-index:200;}
+  .skip:focus{left:0;}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffc24d;outline-offset:2px;}
 </style>
 </head>
 <body>
-<div class="wrap">
+<a class="skip" href="#main">Skip to main content</a>
+<main id="main" class="wrap">
   <div class="check">&#10003;</div>
   <h1>Got It — <span style="color:var(--gold);">Thank You!</span></h1>
   <p>Your submission went straight to Dean. Check your email — a confirmation copy is on its way, and Dean will follow up personally with your next step.</p>
   <p class="tri" style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.3rem;"><b class="c1">DIY</b> <b class="c2">SIGN</b> <b class="c3">GUY.COM</b></p>
   <a class="btn" href="https://diysignguy.com">Back to the Site</a>
-</div>
+</main>
 </body>
 </html>
