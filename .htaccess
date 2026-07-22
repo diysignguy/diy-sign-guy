@@ -1,0 +1,31 @@
+# ============================================================
+# DIY Sign Guy — canonical host + legacy URL redirects + security headers
+# Branch: fix/site-health-and-seo  (server-side 301s, no chains)
+# ============================================================
+
+RewriteEngine On
+
+# --- Canonical host: force non-www over HTTPS (single hop) ---
+RewriteCond %{HTTP_HOST} ^www\.diysignguy\.com$ [NC]
+RewriteRule ^(.*)$ https://diysignguy.com/$1 [R=301,L]
+
+# --- /index.html -> / ---
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://diysignguy.com/ [R=301,L]
+
+# --- Legacy GoDaddy-era URLs -> strongest matching pages ---
+RewriteRule ^diy-l-e-d-kits-&-pricing/?$ https://diysignguy.com/sign-kits.html [R=301,L,NE]
+RewriteRule ^diy-pole-pylon-sign-kit/?$ https://diysignguy.com/pole-pylon-kits.html [R=301,L]
+RewriteRule ^contact/?$ https://diysignguy.com/contact.html [R=301,L]
+RewriteRule ^contact-us/?$ https://diysignguy.com/contact.html [R=301,L]
+RewriteRule ^shop-diy-kits/?$ https://diysignguy.com/sign-kits.html [R=301,L]
+RewriteRule ^home-1(/.*)?$ https://diysignguy.com/ [R=301,L]
+RewriteRule ^light-up-your-business-with-diy-sign-kits/?$ https://diysignguy.com/sign-kits.html [R=301,L]
+
+# --- Security headers (conservative; no CSP yet — proposed separately) ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
