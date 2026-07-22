@@ -13,6 +13,13 @@ RewriteRule ^(.*)$ https://diysignguy.com/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
 RewriteRule ^index\.html$ https://diysignguy.com/ [R=301,L]
 
+# --- Orphan GoDaddy directories physically on the server: mod_alias fires
+#     before the filesystem serves them (rewrite rules alone lose that race) ---
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/diy-pole-pylon-sign-kit(/.*)?$ https://diysignguy.com/pole-pylon-kits.html
+  RedirectMatch 301 "^/diy-l-e-d-kits-&-pricing(/.*)?$" https://diysignguy.com/sign-kits.html
+</IfModule>
+
 # --- Legacy GoDaddy-era URLs -> strongest matching pages ---
 RewriteRule ^diy-l-e-d-kits-&-pricing/?$ https://diysignguy.com/sign-kits.html [R=301,L,NE]
 RewriteRule ^diy-pole-pylon-sign-kit/?$ https://diysignguy.com/pole-pylon-kits.html [R=301,L]
