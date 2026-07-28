@@ -29,10 +29,76 @@ RewriteRule ^shop-diy-kits/?$ https://diysignguy.com/sign-kits.html [R=301,L]
 RewriteRule ^home-1(/.*)?$ https://diysignguy.com/ [R=301,L]
 RewriteRule ^light-up-your-business-with-diy-sign-kits/?$ https://diysignguy.com/sign-kits.html [R=301,L]
 
-# --- Security headers (conservative; no CSP yet — proposed separately) ---
+# --- Verified still 404 on 2026-07-28; both drew Google impressions this week ---
+# GoDaddy's "/f/" flex-section prefix (any page under it -> the matching kit page)
+RewriteRule ^f/light-up-your-business-with-diy-sign-kits/?$ https://diysignguy.com/sign-kits.html [R=301,L]
+RewriteRule ^f/?$ https://diysignguy.com/ [R=301,L]
+# Old storefront root — crawled Feb 2026, never indexed
+RewriteRule ^shop(/.*)?$ https://diysignguy.com/sign-kits.html [R=301,L]
+
+# --- Security headers ---
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  # Belt and braces on the private back office: header-level noindex as well as
+  # the meta tag, so a crawler that reaches it cannot list it.
+  <FilesMatch "\.(html)$">
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet" "expr=%{REQUEST_URI} =~ m#^/office/#"
+  </FilesMatch>
 </IfModule>
+
+# --- Content Security Policy ---
+# Allow-list matches exactly what the site loads: Google Fonts (CSS + font files),
+# Google Analytics, and the FormSubmit endpoint the two forms POST to.
+# No ad networks, no third-party pixels, no inline event handlers.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self' https://formsubmit.co; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; upgrade-insecure-requests"
+</IfModule>
+
+# --- Block source, backup and dotfiles from ever being served ---
+# Wrapped in IfModule on purpose: an unrecognised "Require" would 500 the whole
+# site, and a hard-down site earns nothing. Fail open, not closed.
+<IfModule mod_authz_core.c>
+  <FilesMatch "(^\.|\.(bak|old|orig|save|swp|log|sql|py|sh|ini|conf|htpasswd)$|~$)">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# --- Caching: hashed-content assets are safe to cache hard; HTML is not ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- Custom 404 so a bad URL still shows the site, not a bare server page ---
+ErrorDocument 404 /404.html
+
+# ============================================================
+# PRIVATE BACK OFFICE — HTTP Basic Auth
+# ------------------------------------------------------------
+# NOT enabled here on purpose: this Git repository is PUBLIC, so a password
+# file committed alongside it would be downloadable by anyone.
+# Turn protection on in Hostinger hPanel instead:
+#   Websites -> diysignguy.com -> Advanced -> Password Protect Directories
+#   Directory: /public_html/office     Username + password: chosen by Dean
+# hPanel writes the password file OUTSIDE the web root where it belongs.
+# ============================================================
