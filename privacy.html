@@ -6,6 +6,10 @@
 <title>Privacy Policy | DIY Sign Guy</title>
 <meta name="description" content="How diysignguy.com collects and uses information submitted through our contact form.">
 <link rel="canonical" href="https://diysignguy.com/privacy.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/diy-sign-guy-icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#080808">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DIY Sign Guy">
 <meta property="og:title" content="Privacy Policy | DIY Sign Guy">
@@ -32,6 +36,36 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-69T7JQ3J6S');
+</script>
+<!-- Lead + engagement tracking (no third-party pixels, no ad networks) -->
+<script>
+(function(){
+  function ev(n,p){ if (typeof gtag === 'function') gtag('event', n, p || {}); }
+  function ready(fn){ if (document.readyState !== 'loading') fn();
+                      else document.addEventListener('DOMContentLoaded', fn); }
+  ready(function(){
+    var here = location.pathname.replace(/^\//,'') || 'index.html';
+    document.querySelectorAll('a[href*="contact.html"]').forEach(function(a){
+      a.addEventListener('click', function(){
+        ev('cta_contact_click', {link_text: (a.textContent||'').trim().slice(0,60), source_page: here});
+      });
+    });
+    document.querySelectorAll('a[href*="facebook.com"]').forEach(function(a){
+      a.addEventListener('click', function(){ ev('outbound_facebook', {source_page: here}); });
+    });
+    var f = document.getElementById('contact-form');
+    if (f) {
+      var started = false;
+      f.addEventListener('input', function(){
+        if (!started) { started = true; ev('quote_form_start', {source_page: here}); }
+      }, true);
+      f.addEventListener('submit', function(){
+        try { sessionStorage.setItem('dsg_lead_submitted', String(Date.now())); } catch(e){}
+        ev('quote_form_submit', {source_page: here});
+      });
+    }
+  });
+})();
 </script>
 <style>
   :root{--black:#080808;--panel:#050505;--panel2:#101216;
@@ -226,7 +260,7 @@ gtag('config', 'G-69T7JQ3J6S');
 </nav>
 <div class="fbstrip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> For daily, weekly &amp; monthly deals and coupon codes — please Like &amp; Follow us on Facebook! <a href="https://www.facebook.com/diysignguy" target="_blank" rel="noopener" aria-label="Like and follow DIY Sign Guy on Facebook (opens in new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Like &amp; Follow</a></div>
 <div class="sbaband"><div class="q">Are You Leaving Money On The Table?</div>
-<p>The SBA has reported businesses seeing 15% to 150% more business after adding a lighted electronic sign. <a href="contact.html">Get your free written quote</a>.</p></div>
+<p>A U.S. Small Business Administration and Signage Foundation study of electronic message centers reported owners typically seeing 15% to 150% more business after adding one (SBA/SFCE, 2001). <a href="contact.html">Get your free written quote</a>.</p></div>
 </header>
 <nav class="crumbs" aria-label="Breadcrumb"><div class="crumbwrap"><a href="index.html">Home</a><span class="crumbsep" aria-hidden="true">&rsaquo;</span><span aria-current="page">Privacy</span></div></nav>
 <main id="main">
@@ -237,9 +271,14 @@ gtag('config', 'G-69T7JQ3J6S');
   <h2>How We Use Your Information</h2>
   <p>We use the information you submit for one purpose: to respond to your inquiry and communicate with you about your sign project. We do not sell, rent, or share your personal information with third parties for their marketing purposes.</p>
   <h2>Form Processing</h2>
-  <p>Form submissions are transmitted to us by a third-party form delivery service, which forwards your submission to our email and processes it solely to deliver it to us.</p>
+  <p>Form submissions are delivered to us by FormSubmit (formsubmit.co), a third-party form delivery service. FormSubmit receives the contents of your submission for the sole purpose of forwarding it to our email address. We do not use it for any other purpose, and it is not used to build advertising profiles.</p>
   <h2>Cookies &amp; Analytics</h2>
-  <p>This site may use analytics tools and advertising pixels to understand site traffic and measure advertising. These tools may set cookies in your browser. You can control cookies through your browser settings and opt out of personalized advertising through those platforms' settings.</p>
+  <p>This site uses Google Analytics to count visits and see which pages people read. Google Analytics sets cookies in your browser and receives your IP address, the pages you view, and basic device and browser information. We use it to understand how the site is performing &mdash; nothing more.</p>
+  <p><b>We do not run advertising pixels, retargeting tags, or any ad-network tracking on this website.</b> No advertising network receives data about your visit.</p>
+  <p>Page fonts are loaded from Google Fonts, which means your browser makes a request to Google when a page loads. Aside from Google (analytics and fonts) and FormSubmit (contact form delivery), no third party receives information about your visit.</p>
+  <p>You can block or delete cookies through your browser settings at any time, and Google publishes a browser add-on that opts you out of Google Analytics entirely. Blocking these does not affect your ability to use the site or submit the form.</p>
+  <h2>Server Logs</h2>
+  <p>Like nearly every website, our web host records standard access logs &mdash; IP address, time of request, page requested and browser type &mdash; which are kept for a limited period for security and troubleshooting.</p>
   <h2>Data Retention</h2>
   <p>We keep inquiry emails as long as needed to serve you and maintain our business records. You may request deletion of your information at any time through the <a href="contact.html">contact page</a>.</p>
   <h2>Children's Privacy</h2>
