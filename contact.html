@@ -163,9 +163,11 @@ gtag('config', 'G-69T7JQ3J6S');
   form.qform{background:#101216;border:1px solid var(--line);border-radius:16px;padding:30px;display:grid;gap:16px;}
   .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:#e6ebf2;}
-  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #333c48;border-radius:9px;font-size:.95rem;font-family:'Inter',sans-serif;background:#0a0b0e;color:#fff;}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid #6f7a89;border-radius:9px;font-size:.95rem;font-family:'Inter',sans-serif;background:#0a0b0e;color:#fff;}
   .field textarea{min-height:130px;resize:vertical;}
   .fine{font-size:.78rem;color:var(--muted);}
+  .fnote{font-size:.78rem;color:var(--muted);margin-top:6px;min-height:1.2em;}
+  .fnote:empty{min-height:0;}
   .privacy{background:rgba(47,149,255,.08);border:1px solid #1f3d5e;border-radius:12px;padding:16px 20px;font-weight:600;color:#cfe4ff;margin-bottom:24px;max-width:880px;}
   .helppanel{background:#101216;border:1px solid var(--line);border-radius:16px;padding:26px;}
   .helppanel h3{margin-bottom:10px;}
@@ -193,10 +195,10 @@ gtag('config', 'G-69T7JQ3J6S');
   .fclinks a:last-child,.fclinks span:last-child{border-right:none;margin-right:0;padding-right:0;}
   .footcredit{max-width:1160px;margin:22px auto 0;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--muted);}
   .footcredit img{height:26px;width:auto;display:block;}
-  .footcredit a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:12px;}
+  .footcredit a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;min-width:0;max-width:100%;}
   .footcredit a:hover{color:var(--gold);}
   .footcredit a:hover img{filter:brightness(1.15);}
-  .footcredit .site{text-decoration:underline;text-underline-offset:2px;}
+  .footcredit .site{text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere;}
   .legal{max-width:820px;}
   .legal h2{margin-top:32px;}
   .legal p{color:#c3ccd9;margin-bottom:14px;}
@@ -211,6 +213,7 @@ gtag('config', 'G-69T7JQ3J6S');
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
+<header class="sitehead">
 <div class="topbanner">
   <img src="images/thanks-for-stopping-by-contact-header.webp" style="width:100%;height:auto;display:block;" width="1024" height="292" alt="DIY Sign Guy neon logo with the message Thanks for stopping by">
 </div>
@@ -221,6 +224,7 @@ gtag('config', 'G-69T7JQ3J6S');
 <div class="fbstrip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> For daily, weekly &amp; monthly deals and coupon codes — please Like &amp; Follow us on Facebook! <a href="https://www.facebook.com/diysignguy" target="_blank" rel="noopener" aria-label="Like and follow DIY Sign Guy on Facebook (opens in new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="fbi"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.48 0-1.94.92-1.94 1.87v2.24h3.3l-.53 3.49h-2.77V24C19.61 23.1 24 18.1 24 12.07z"/></svg> Like &amp; Follow</a></div>
 <div class="sbaband"><div class="q">Are You Leaving Money On The Table?</div>
 <p>The SBA has reported businesses seeing 15% to 150% more business after adding a lighted electronic sign. <a href="contact.html">Get your free written quote</a>.</p></div>
+</header>
 <nav class="crumbs" aria-label="Breadcrumb"><div class="crumbwrap"><a href="index.html">Home</a><span class="crumbsep" aria-hidden="true">&rsaquo;</span><span aria-current="page">Contact</span></div></nav>
 <main id="main">
 
@@ -242,25 +246,26 @@ gtag('config', 'G-69T7JQ3J6S');
       </div>
       <div class="frow">
         <div class="field"><label for="f-email">Email address *</label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
-        <div class="field"><label for="f-state">What state are you in? *</label><select id="f-state" name="state" required><option value="">Select your state</option><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Washington DC</option></select></div>
+        <div class="field"><label for="f-state">What state are you in? *</label><select id="f-state" name="state" required autocomplete="address-level1"><option value="">Select your state</option><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option><option>Washington DC</option></select></div>
       </div>
       <div class="frow">
-        <div class="field"><label for="f-phone">Phone number (optional)</label><input id="f-phone" type="tel" name="phone" autocomplete="tel"></div>
-        <div class="field"><label for="f-perm">Is it okay to call or text?</label>
-          <select id="f-perm" name="contact_permission">
+        <div class="field"><label for="f-phone">Phone number (optional)</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" aria-describedby="form-help"></div>
+        <div class="field"><label for="f-perm">Is it okay to call or text?<span id="f-perm-star" hidden> *</span></label>
+          <select id="f-perm" name="contact_permission" aria-describedby="f-perm-note">
             <option value="">Select an option</option>
             <option value="call-or-text">Yes — call or text</option>
             <option value="call-only">Call only</option>
             <option value="text-only">Text only</option>
             <option value="email-only">No — email only</option>
           </select>
+          <p class="fnote" id="f-perm-note" role="status"></p>
         </div>
       </div>
       <div class="field"><label for="f-proj">What is your project? *</label>
         <textarea id="f-proj" name="project_details" required placeholder="Tell me what you're trying to do: the type of sign or graphics, approximate sizes, whether it's illuminated, what you already have, and any project or install details that help."></textarea>
       </div>
       <button type="submit" class="btn">Send My Project Details</button>
-      <div class="fine">Required fields marked *. If you enter a phone number, please choose a call/text preference.</div>
+      <div class="fine" id="form-help">Required fields marked *. If you enter a phone number, please choose a call/text preference.</div>
     </form>
     <div class="helppanel">
       <h2>What Happens Next</h2>
@@ -279,13 +284,31 @@ gtag('config', 'G-69T7JQ3J6S');
   <div>Real Guidance<small>From the guy who builds it</small></div>
 </div>
 <script>
-(function(){var p=document.getElementById('f-phone'),m=document.getElementById('f-perm');
-function s(){if(p.value.trim()){m.setAttribute('required','required');}else{m.removeAttribute('required');}}
-p.addEventListener('input',s);s();})();
+(function(){
+var p=document.getElementById('f-phone'),m=document.getElementById('f-perm'),
+    star=document.getElementById('f-perm-star'),note=document.getElementById('f-perm-note'),was=null;
+function s(){
+  var need=!!p.value.trim();
+  if(need===was)return;
+  was=need;
+  if(need){
+    m.setAttribute('required','required');
+    m.setAttribute('aria-required','true');
+    star.hidden=false;
+    note.textContent='Call or text preference is now required because you entered a phone number.';
+  }else{
+    m.removeAttribute('required');
+    m.setAttribute('aria-required','false');
+    star.hidden=true;
+    note.textContent='';
+  }
+}
+p.addEventListener('input',s);p.addEventListener('change',s);s();
+})();
 </script>
 
-</main>
 <div class="ctaband"><h2>Ready to get your written quote?</h2><p>Every kit is prepared to order. Tell us about your project and we'll answer with a straight, written quote.</p><a class="btn" href="contact.html">Contact DIY Sign Guy</a></div>
+</main>
 <footer><div class="footcities">
   <div class="fchead">DIY LED Sign Kits Shipped To</div>
   <nav class="fclinks" aria-label="Sign kits by city"><a href="kansas-city-mo-sign-kits.html">Kansas City, MO</a><a href="springfield-mo-sign-kits.html">Springfield, MO</a><a href="des-moines-ia-sign-kits.html">Des Moines, IA</a><a href="chicago-il-sign-kits.html">Chicago, IL</a><a href="memphis-tn-sign-kits.html">Memphis, TN</a><a href="nashville-tn-sign-kits.html">Nashville, TN</a><a href="little-rock-ar-sign-kits.html">Little Rock, AR</a><a href="northwest-arkansas-sign-kits.html">Northwest Arkansas</a><a href="oklahoma-city-ok-sign-kits.html">Oklahoma City, OK</a><a href="tulsa-ok-sign-kits.html">Tulsa, OK</a><a href="wichita-ks-sign-kits.html">Wichita, KS</a><a href="omaha-ne-sign-kits.html">Omaha, NE</a><a href="dublin-oh-sign-kits.html">Dublin, OH</a><a href="delaware-oh-sign-kits.html">Delaware, OH</a><a href="mason-oh-sign-kits.html">Mason, OH</a><a href="medina-oh-sign-kits.html">Medina, OH</a><a href="beavercreek-oh-sign-kits.html">Beavercreek, OH</a><a href="ocala-fl-sign-kits.html">Ocala, FL</a><a href="lakeland-fl-sign-kits.html">Lakeland, FL</a><a href="kissimmee-fl-sign-kits.html">Kissimmee, FL</a><a href="port-st-lucie-fl-sign-kits.html">Port St. Lucie, FL</a><a href="cape-coral-fl-sign-kits.html">Cape Coral, FL</a></nav>
