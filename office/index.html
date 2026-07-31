@@ -51,6 +51,37 @@
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
   .skip{position:absolute;left:-9999px;top:0;background:#ffc24d;color:#141a22;padding:12px 20px;font-weight:700;z-index:200;}
   .skip:focus{left:0;}
+
+  .ordband{margin:30px auto 0;padding:26px 24px 28px;border-top:1px solid var(--line);
+    background:linear-gradient(180deg,#0b0d11 0%,#07080b 100%);}
+  .ordinner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;
+    gap:28px;flex-wrap:wrap;text-align:left;}
+  .ordinner .ordlogo{display:block;flex:0 0 auto;line-height:0;}
+  .ordinner .ordlogo img{height:76px;width:auto;display:block;}
+  .ordinner .ordlogo:hover img{filter:brightness(1.18);}
+  .ordcopy{flex:1 1 340px;min-width:0;}
+  .ordhead{font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;line-height:1.15;
+    letter-spacing:.03em;text-transform:uppercase;font-weight:700;color:var(--gold);margin:0 0 6px;}
+  .ordcopy p{margin:0;font-size:.97rem;line-height:1.5;color:#c3ccd8;}
+  .ordcopy p b{color:#e8edf4;font-weight:600;}
+  .ordcta{flex:0 0 auto;display:inline-block;padding:13px 26px;border:1px solid var(--gold);
+    border-radius:8px;color:var(--gold);text-decoration:none;white-space:nowrap;
+    font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.08rem;letter-spacing:.07em;
+    text-transform:uppercase;font-weight:700;}
+  .ordcta:hover,.ordcta:focus{background:var(--gold);color:#07080b;}
+  @media(max-width:820px){
+    .ordband{padding:22px 16px 24px;}
+    .ordinner{flex-direction:column;text-align:center;gap:18px;}
+    .ordinner .ordlogo img{height:60px;max-width:100%;}
+    .ordhead{font-size:1.3rem;}
+    .ordcopy{flex:1 1 auto;}
+    .ordcta{width:100%;max-width:340px;white-space:normal;padding:13px 18px;font-size:1.02rem;}
+  }
+  @media(max-width:400px){
+    .ordinner .ordlogo img{height:48px;}
+    .ordhead{font-size:1.18rem;}
+    .ordcopy p{font-size:.92rem;}
+  }
 </style>
 </head>
 <body>
@@ -146,6 +177,17 @@
 
 </main>
 <footer><nav aria-label="Site and legal links">Bookmark this page &middot; it's unlisted and hidden from search engines &middot; <a href="https://diysignguy.com">diysignguy.com</a></nav></footer>
+<div class="ordband">
+  <div class="ordinner">
+    <a class="ordlogo" href="https://www.ordnancemarketing.com" target="_blank" rel="noopener" aria-label="Ordnance Marketing home page (opens in a new tab)"><img src="/images/ordnance-marketing-logo.webp" width="760" height="189" alt="Ordnance Marketing logo" loading="lazy" decoding="async"></a>
+    <div class="ordcopy">
+      <div class="ordhead">Need a website like this one?</div>
+      <p>This site was built and is maintained by <b>Ordnance Marketing</b> &mdash; websites, SEO and lead generation for small business.</p>
+    </div>
+    <a class="ordcta" href="https://www.ordnancemarketing.com" target="_blank" rel="noopener">Visit Ordnance Marketing</a>
+  </div>
+</div>
+
 <script>
 (function(){
   var out=document.getElementById('g-out');
