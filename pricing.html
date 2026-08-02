@@ -88,12 +88,11 @@ gtag('config', 'G-69T7JQ3J6S');
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
   /* HEADER BANNER */
   .topbanner{width:100%;display:block;background:#050608;overflow:hidden;}
-  .finstrip{display:block;line-height:0;background:#fff;}
-  .finstrip img{width:100%;height:auto;display:block;}
-  .finbadgewrap{display:flex;justify-content:flex-end;padding:10px 16px 2px;background:#050608;}
-  .finbadge{display:block;line-height:0;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.55);}
-  .finbadge img{display:block;width:100%;max-width:340px;height:auto;}
-  @media(max-width:700px){.finbadgewrap{justify-content:center;padding:8px 12px 2px;}.finbadge img{max-width:290px;}}
+  .finbadgewrap{display:flex;justify-content:flex-end;padding:12px 18px;background:var(--black);}
+  .finbadge{display:block;line-height:0;border-radius:8px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;}
+  .finbadge:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(47,149,255,.35);}
+  .finbadge img{display:block;width:100%;max-width:260px;height:auto;}
+  @media(max-width:700px){.finbadgewrap{justify-content:center;padding:10px 12px;}.finbadge img{max-width:230px;}}
   .topbanner img{width:100%;height:auto;display:block;}
   .pagehead{background:radial-gradient(900px 300px at 50% -20%,rgba(47,149,255,.16),transparent 60%),#0a0a0c;
     border-bottom:1px solid var(--line);padding:56px 24px;text-align:center;}
@@ -303,7 +302,6 @@ gtag('config', 'G-69T7JQ3J6S');
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="sitehead">
-<a class="finstrip" href="easy-financing.html"><img src="images/easy-financing-sign-financing-banner.webp" width="1600" height="583" decoding="async" alt="Easy financing available for business signs — 550 minimum FICO score, 24-hour funding, get preapproved right now"></a>
 <div class="topbanner pricing-header"><img src="images/diy-sign-guy-homepage-neon-header-mascot-pointing.webp" alt="DIY Sign Guy neon workshop header with a mascot pointing toward the website navigation" width="1497" height="729"></div>
 <div class="dealerbar"><span class="dlabel">Sign Dealers</span><a class="dgold" href="become-a-dealer.html">Become a Dealer</a><a href="dealer-login.html">Dealer Login</a></div>
 <nav class="mainnav" aria-label="Main navigation">
@@ -317,6 +315,7 @@ gtag('config', 'G-69T7JQ3J6S');
 <div class="sbaband"><div class="q">Are You Leaving Money On The Table?</div>
 <p>A U.S. Small Business Administration and Signage Foundation study of electronic message centers reported owners typically seeing 15% to 150% more business after adding one (SBA/SFCE, 2001). <a href="contact.html">Get your free written quote</a>.</p></div>
 </header>
+<div class="finbadgewrap"><a class="finbadge" href="easy-financing.html" title="Easy financing available — 550 minimum FICO score"><img src="images/easy-financing-badge.webp" width="760" height="277" decoding="async" alt="Easy financing available for business signs — 550 minimum FICO score, 24-hour funding, get preapproved right now"></a></div>
 <nav class="crumbs" aria-label="Breadcrumb"><div class="crumbwrap"><a href="index.html">Home</a><span class="crumbsep" aria-hidden="true">&rsaquo;</span><span aria-current="page">Pricing</span></div></nav>
 <main id="main">
 

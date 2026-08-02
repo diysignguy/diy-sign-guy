@@ -88,12 +88,11 @@ gtag('config', 'G-69T7JQ3J6S');
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
   /* HEADER BANNER */
   .topbanner{width:100%;display:block;background:#050608;overflow:hidden;}
-  .finstrip{display:block;line-height:0;background:#fff;}
-  .finstrip img{width:100%;height:auto;display:block;}
-  .finbadgewrap{display:flex;justify-content:flex-end;padding:10px 16px 2px;background:#050608;}
-  .finbadge{display:block;line-height:0;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.55);}
-  .finbadge img{display:block;width:100%;max-width:340px;height:auto;}
-  @media(max-width:700px){.finbadgewrap{justify-content:center;padding:8px 12px 2px;}.finbadge img{max-width:290px;}}
+  .finbadgewrap{display:flex;justify-content:flex-end;padding:12px 18px;background:var(--black);}
+  .finbadge{display:block;line-height:0;border-radius:8px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.5);transition:transform .15s ease,box-shadow .15s ease;}
+  .finbadge:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(47,149,255,.35);}
+  .finbadge img{display:block;width:100%;max-width:260px;height:auto;}
+  @media(max-width:700px){.finbadgewrap{justify-content:center;padding:10px 12px;}.finbadge img{max-width:230px;}}
   .topbanner img{width:100%;height:auto;display:block;}
   .pagehead{background:radial-gradient(900px 300px at 50% -20%,rgba(47,149,255,.16),transparent 60%),#0a0a0c;
     border-bottom:1px solid var(--line);padding:56px 24px;text-align:center;}
@@ -299,7 +298,6 @@ gtag('config', 'G-69T7JQ3J6S');
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="sitehead">
-<a class="finstrip" href="easy-financing.html"><img src="images/easy-financing-sign-financing-banner.webp" width="1600" height="583" decoding="async" alt="Easy financing available for business signs — 550 minimum FICO score, 24-hour funding, get preapproved right now"></a>
 <div class="topbanner">
   <img src="images/diy-sign-kits-4-7-10-inch-led-frames-pricing-wide.webp" style="width:100%;height:auto;display:block;" width="1448" height="706" alt="DIY LED sign kit frame depths and current per-foot pricing: 4-inch $35, 7-inch $40, 10-inch $50 per foot">
 </div>
@@ -313,6 +311,7 @@ gtag('config', 'G-69T7JQ3J6S');
 <p>Order a ground-shipped kit during August and the freight is on me &mdash; <b>a $70 to $210 value straight back in your pocket</b>. Enter code <b>DIYSHIP</b> when you <a href="contact.html">request your written quote</a>. Ends August 31, 2026.</p>
 <p class="pfine">Applies to FedEx Ground kit orders shipped within the continental United States. Does not apply to freight shipments, accessory-only or hardware-only orders, or shipments to Alaska and Hawaii. One code per customer. Cannot be combined with other offers.</p></div>
 </header>
+<div class="finbadgewrap"><a class="finbadge" href="easy-financing.html" title="Easy financing available — 550 minimum FICO score"><img src="images/easy-financing-badge.webp" width="760" height="277" decoding="async" alt="Easy financing available for business signs — 550 minimum FICO score, 24-hour funding, get preapproved right now"></a></div>
 <nav class="crumbs" aria-label="Breadcrumb"><div class="crumbwrap"><a href="index.html">Home</a><span class="crumbsep" aria-hidden="true">&rsaquo;</span><span aria-current="page">Sign Kits</span></div></nav>
 <main id="main">
 
