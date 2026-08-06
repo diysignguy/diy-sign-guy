@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robo Goats | Ordnance Marketing</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#080808;--panel:#050505;--panel2:#101216;
+    --blue:#2f95ff;--blue-deep:#1673e6;--orange:#ff9130;--gold:#ffc24d;--red:#ff5252;--stripe:#635bff;
+    --muted:#9aa6b5;--line:#20242b;--glow:rgba(47,149,255,.4);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;background:var(--black);color:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  p a,footer a{text-decoration:underline;text-underline-offset:2px;}
+  h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;letter-spacing:.01em;}
+  h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.05;}
+  h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;margin-bottom:6px;}
+  h3{font-size:1.05rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#e6ebf2;margin:18px 0 6px;}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  .pagehead{background:radial-gradient(900px 300px at 50% -20%,rgba(47,149,255,.16),transparent 60%),#0a0a0c;
+    border-bottom:1px solid var(--line);padding:40px 24px;text-align:center;}
+  .tri .c1{color:var(--orange);} .tri .c2{color:var(--blue);text-shadow:0 0 24px var(--glow);} .tri .c3{color:var(--red);}
+  .kick{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+  .pagehead p{color:var(--muted);max-width:640px;margin:10px auto 0;}
+  main{max-width:1000px;margin:0 auto;padding:36px 24px 60px;display:grid;gap:26px;}
+  .panel{background:#101216;border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .panel .sub{color:var(--muted);font-size:.92rem;margin-bottom:16px;}
+  .btnrow{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-align:center;background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;font-weight:700;
+    padding:12px 20px;border-radius:11px;box-shadow:0 6px 20px var(--glow);transition:transform .2s;border:none;cursor:pointer;font-size:.95rem;font-family:'Inter',sans-serif;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-stripe{background:linear-gradient(160deg,#7a73ff,#5851e8);box-shadow:0 6px 20px rgba(99,91,255,.35);}
+  .btn-ghost{background:#181b21;border:1px solid #333c48;box-shadow:none;color:#dfe6ef;}
+  .steps{margin:14px 0 0 20px;color:#c3ccd9;font-size:.93rem;display:grid;gap:7px;}
+  .steps b{color:#fff;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;}
+  .field label{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px;color:#e6ebf2;}
+  .field input,.field textarea{width:100%;padding:11px 13px;border:1px solid #333c48;border-radius:9px;font-size:.92rem;font-family:'Inter',sans-serif;background:#0a0b0e;color:#fff;}
+  .linkout{margin-top:14px;background:#0a0b0e;border:1px dashed #333c48;border-radius:9px;padding:12px 14px;font-size:.83rem;color:var(--gold);word-break:break-all;min-height:44px;}
+  .coupon{display:flex;align-items:center;gap:14px;background:#0d0f13;border:1px solid #3a3320;border-radius:12px;padding:14px 18px;}
+  .coupon code{font-size:1.3rem;font-weight:800;color:var(--gold);letter-spacing:.08em;}
+  .coupon span{color:var(--muted);font-size:.9rem;}
+  .copied{color:#5dd28e !important;border-color:#2b5940 !important;}
+  .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#141a22;color:var(--gold);margin-bottom:10px;}
+  .role{font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.15rem;color:var(--gold);margin-bottom:10px;letter-spacing:.03em;}
+  .crew{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px;}
+  .crewcard{background:#0a0b0e;border:1px solid #333c48;border-radius:12px;padding:16px 18px;}
+  .crewcard b{display:block;font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.25rem;color:#fff;letter-spacing:.03em;}
+  .crewcard span{color:var(--muted);font-size:.86rem;}
+  .lede{color:#c3ccd9;font-size:1.02rem;}
+  footer{background:var(--panel);border-top:1px solid var(--line);padding:24px;color:var(--muted);font-size:.85rem;text-align:center;}
+  footer a{color:var(--gold);}
+  @media(max-width:700px){.frow{grid-template-columns:1fr;}main{padding:28px 16px 48px;}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+  .skip{position:absolute;left:-9999px;top:0;background:#ffc24d;color:#141a22;padding:12px 20px;font-weight:700;z-index:200;}
+  .skip:focus{left:0;}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="pagehead">
+  <span class="kick">Ordnance Marketing</span>
+  <h1 class="tri"><b class="c1">HIRE</b> <b class="c2">A</b> <b class="c3">GOAT</b></h1>
+  <p style="font-family:'Barlow Condensed',Arial,sans-serif;font-size:1.5rem;color:#fff;margin-top:12px;">A working crew for your marketing &mdash; one job each</p>
+  <p>Seven specialists. You hire the ones you need, add more when you're ready, and every one of them reports what it actually did.</p>
+</div>
+<main id="main">
+
+  <div class="panel">
+    <span class="tag">The Idea</span>
+    <h2>What A Robo Goat Is</h2>
+    <p class="lede">Most marketing help is one generalist juggling everything &mdash; and the things that don't shout get dropped. We do it differently. A <b>Robo Goat</b> is a single specialist with one job, one set of rules, and a written record of what it did. You start with the one goat that solves your loudest problem. When that's handled, you add another. Nobody is charging you for a bundle you didn't ask for.</p>
+    <h3>How it works</h3>
+    <ol class="steps">
+      <li><b>We look at what you already have.</b> Your site, your search presence, your competitors, your intake. No guesswork.</li>
+      <li><b>You pick the goat.</b> One lane, one specialist, clear scope of work.</li>
+      <li><b>The work gets done and verified.</b> Every change is checked on the live site, not assumed.</li>
+      <li><b>You get a plain-English report.</b> What was done, what moved, and the single next thing worth doing.</li>
+      <li><b>Add another goat when the last one has earned it.</b> Never before.</li>
+    </ol>
+    <h3>What we won't do</h3>
+    <ul class="steps">
+      <li>We don't guarantee rankings. Nobody who understands search honestly can.</li>
+      <li>We don't show you other people's numbers dressed up as a forecast. When we review results, we use <b>your</b> numbers.</li>
+      <li>We don't use mass-generated pages, bought accounts, hidden text, or bot-only versions of your site. Those tactics work until they cost you everything.</li>
+      <li>We don't post anything under your name without your approval.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <span class="tag">The Crew</span>
+    <h2>Meet The Seven</h2>
+    <p class="sub">Each one is a lane. Hire one, hire several &mdash; they're built to work together without stepping on each other.</p>
+    <div class="crew">
+      <div class="crewcard"><b>Billy</b><span>Runs the crew. Your single point of contact.</span></div>
+      <div class="crewcard"><b>Scout</b><span>Gets you found &mdash; on Google and in AI answers.</span></div>
+      <div class="crewcard"><b>Rigger</b><span>Builds and ships the changes to your site.</span></div>
+      <div class="crewcard"><b>Sniper</b><span>Finds out why your competitors are winning.</span></div>
+      <div class="crewcard"><b>Ledger</b><span>Turns inquiries into quotes, invoices and paid work.</span></div>
+      <div class="crewcard"><b>Gabby</b><span>Writes your social, ads and campaign copy.</span></div>
+      <div class="crewcard"><b>Sentry</b><span>Watches everything and tells you the moment it breaks.</span></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 1</span>
+    <h2>Billy &mdash; Runs The Crew</h2>
+    <p class="role">One person to talk to. No project-management tax on you.</p>
+    <p class="lede">You tell Billy what you need in ordinary language. He decides which specialist owns it, puts the work in the right order, and inspects the result before it goes anywhere near your live site or your audience. You are never the one figuring out which task belongs to whom.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>A single contact for everything, instead of chasing four people.</li>
+      <li>Work sequenced so the expensive stuff doesn't get built on a bad foundation.</li>
+      <li>A quality gate before anything ships &mdash; claims checked, rules checked, links checked.</li>
+      <li>Honest counsel on what to add next, based on what your current goats actually produced.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Any business hiring more than one goat &mdash; and any owner who's tired of being the middleman between vendors.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 2</span>
+    <h2>Scout &mdash; Gets You Found</h2>
+    <p class="role">Search rankings and AI answers</p>
+    <p class="lede">Scout works on getting your business in front of people at the moment they're looking to buy. That means the words on your pages, the titles and descriptions that decide whether anyone clicks, the structured data that helps search engines understand what you sell &mdash; and increasingly, whether your business gets named when someone asks an AI assistant for a recommendation instead of typing into a search box.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>Pages that answer the question in the first paragraph &mdash; the format both search engines and AI assistants pull from.</li>
+      <li>Titles and descriptions written to earn the click, not just to exist.</li>
+      <li>A weekly measurement: impressions, positions on your bellwether searches, and how many <b>different</b> searches are finding you &mdash; the number that moves first.</li>
+      <li>An honest read on timing. Retargeting a page typically takes weeks to show movement, and we tell you that up front instead of after.</li>
+      <li>One clear next action every week. Never a dashboard dump you have to interpret yourself.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Businesses whose customers search before they buy, and anyone watching AI assistants recommend competitors instead of them.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 3</span>
+    <h2>Rigger &mdash; Builds And Ships It</h2>
+    <p class="role">The work actually goes live, and we prove it</p>
+    <p class="lede">A plan that never reaches your website is worth nothing. Rigger owns the build and the deployment, and finishes by checking the live public page &mdash; with caching forced off &mdash; to confirm real visitors see the change. That last step is the one most shops skip, and it's why clients so often find out months later that a fix never landed.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>Changes built from a source template, so your pages stay consistent instead of drifting apart one hand-edit at a time.</li>
+      <li>Automatic guardrails: page titles and descriptions that exceed search-engine limits stop the build instead of shipping broken.</li>
+      <li>Image updates handled properly, so a replaced graphic actually appears instead of sitting behind a year-long browser cache.</li>
+      <li>A verified deploy every time &mdash; compared before, compared after, then swept live page by page.</li>
+      <li>Nothing touched that you didn't ask to be touched.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Any site with more than a handful of pages, and any business that's been burned by "we pushed it" turning out to be false.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 4</span>
+    <h2>Sniper &mdash; Finds The Opening</h2>
+    <p class="role">Competitive intelligence, from public information only</p>
+    <p class="lede">Before spending a dollar on your marketing, it's worth knowing exactly why the business above you is above you. Sniper researches your actual competitors &mdash; what they rank for that you don't, how their pages are built, what their reviews look like, whether they publish prices, and where they're thin. The result is a target file: the specific openings, ranked by what they're likely to be worth.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>A named list of who is actually beating you, on which searches &mdash; not a vague "the competition."</li>
+      <li>Their content strategy, laid out so you can see what you're up against.</li>
+      <li>Their weak spots: thin pages, hidden pricing, slow load, missing structured data, pages nothing links to.</li>
+      <li>A prioritized attack list, so your budget goes at the biggest opening first.</li>
+      <li>Public information only. Every finding verified before it reaches you.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Anyone starting fresh with an agency, entering a new market, or watching a competitor pull ahead without knowing why.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 5</span>
+    <h2>Ledger &mdash; Turns Interest Into Paid Work</h2>
+    <p class="role">Quotes, invoices, payments, follow-up</p>
+    <p class="lede">Traffic that never turns into an invoice is a hobby. Ledger works the back half of the sale: the inbound inquiry, the written quote, the agreement, the invoice, the payment link, and the polite follow-up on anything that's gone quiet. Card payments run through a proper processor, so card numbers never touch your business or your website.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>Inquiries answered promptly, with a written quote rather than a vague reply.</li>
+      <li>Invoices that match the quote line for line &mdash; the single biggest source of payment disputes, removed.</li>
+      <li>Payment links you can text or message to anyone, for deposits and simple flat amounts.</li>
+      <li>Promotions and discount codes applied correctly and tracked, instead of remembered wrong.</li>
+      <li>Aging invoices flagged automatically, with the follow-up already written in your voice &mdash; you just send it.</li>
+      <li>The arithmetic shown whenever money math is involved, so you can check it yourself.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Owners who are quoting off the top of their head, chasing payments by memory, or losing deals in the gap between "interested" and "invoiced."</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 6</span>
+    <h2>Gabby &mdash; Writes What You Post</h2>
+    <p class="role">Social, ads and campaigns &mdash; approved by you before anything goes out</p>
+    <p class="lede">Gabby handles the platforms you don't own: your social posts, the monthly promotion cycle, ad copy and who it should be aimed at, community replies where your expertise is genuinely useful, and video and business-listing descriptions. Everything arrives finished and in your voice, ready to paste. Nothing is ever published without you pressing the button.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>A month of posts written in your voice, not generic filler.</li>
+      <li>The promotion cycle managed properly &mdash; the new one built, the expired one retired before it embarrasses you.</li>
+      <li>Ad copy plus a recommendation on who to show it to.</li>
+      <li>Community and forum replies drafted under a strict value-first rule, with honest disclosure of who you are. Real participation, not spam.</li>
+      <li>A read on what your competitors are running and what appears to be working for them.</li>
+      <li>Final approval stays with you. Always.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Businesses that know they should be posting, keep meaning to, and haven't in a month.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Goat 7</span>
+    <h2>Sentry &mdash; Catches It Before Your Customer Does</h2>
+    <p class="role">Scheduled patrols. Reports problems &mdash; never quietly patches them</p>
+    <p class="lede">Websites break silently. A page starts returning an error, an expired promotion sits there for weeks past its end date, an old image refuses to update, a page falls out of the search index. Sentry patrols on a schedule and tells you &mdash; with the URL, what was expected, what was found, and how serious it is. Deliberately, Sentry does not fix things. A watchdog that also repairs will paper over the problems you most needed to hear about.</p>
+    <h3>What you get</h3>
+    <ul class="steps">
+      <li>Regular checks that your site is up and your pages are serving current content.</li>
+      <li>Broken links and missing pages caught early, not by a customer.</li>
+      <li>Expired promotions flagged the moment they should have come down.</li>
+      <li>An alert if a competitor overtakes you on a search you were winning.</li>
+      <li>A one-line all-clear when everything is fine. No noise for the sake of looking busy.</li>
+    </ul>
+    <h3>Best for</h3>
+    <p class="lede">Any business whose website is a real sales channel &mdash; and anyone who has ever found out about an outage from a customer.</p>
+  </div>
+
+  <div class="panel">
+    <span class="tag">Straight Talk</span>
+    <h2>How We Price And How We Report</h2>
+    <p class="lede">You hire goats one at a time. Scope is agreed in writing before work starts, and quoted per goat &mdash; so you're never paying for a lane you don't need. When it's time to consider adding another specialist, we make that case using your own results, not a case study about somebody else's business.</p>
+    <h3>Our standing rules</h3>
+    <ul class="steps">
+      <li><b>No promises. Receipts.</b> We describe the work we will do, then show what was done.</li>
+      <li>No invented customers, no invented statistics, no borrowed results presented as yours.</li>
+      <li>No ranking guarantees, from us or from anyone worth hiring.</li>
+      <li>Websites we build target WCAG 2.2 AA conformance for accessibility &mdash; built into the pages, not bolted on with a widget.</li>
+      <li>Everything is explained in plain English. If you need a glossary to read our report, we wrote it wrong.</li>
+    </ul>
+    <div class="btnrow" style="margin-top:20px;">
+      <a class="btn" href="https://ordnancemarketing.com">Talk to Ordnance Marketing</a>
+      <a class="btn btn-ghost" href="index.html">&larr; Back to the Back Office</a>
+    </div>
+  </div>
+
+</main>
+<footer><nav aria-label="Site and legal links"><a href="https://ordnancemarketing.com">Ordnance Marketing</a> &middot; Robo Goat Division &middot; <a href="index.html">Back Office</a></nav></footer>
+</body>
+</html>
